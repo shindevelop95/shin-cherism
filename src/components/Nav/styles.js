@@ -21,6 +21,14 @@ export const Group = styled.div`
     justify-content: space-evenly;
 `;
 
+export const TextGroup = styled.div`
+    display:flex;
+    justify-content: space-between;
+    width:50%;
+    color:#eee;
+    align-items: center;
+`;
+
 export const Button = styled.button`
     background-color: transparent;
     color:#eee;

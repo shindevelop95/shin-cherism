@@ -4,7 +4,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { Container, Wrapper, Group, Button, Text, Input } from './styles'
+import { Container, Wrapper, TextGroup, Group, Button, Text, Input } from './styles'
 
 function Nav() {
     return (
@@ -21,6 +21,13 @@ function Nav() {
                         <InstagramIcon />
                     </Button>
                 </Group>
+                <TextGroup>
+                    <Text>Shop</Text>
+                    <Text>Bestseller</Text>
+                    <Text>Blog</Text>
+                    <Text>Contact</Text>
+                    <Text>About Us</Text>
+                </TextGroup>
                 <Group>
                     <Button>
                         <Text>Register</Text>
