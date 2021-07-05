@@ -82,7 +82,7 @@ export const BannerText = styled.h1``;
 
 export const BannerWrap = styled.div`
     position:relative;
-
+    
     &:after{
         content:'';
         position:absolute;
@@ -94,4 +94,20 @@ export const BannerWrap = styled.div`
     }
 `;
 
-export const ImageBanner = styled.div``;
+export const ImageBanner = styled.div`
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+    font-size:50px;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color:#2b8068;
+    padding:60px 80px;
+    background-color:rgba(255,255,255,.7);
+
+    span{
+        border:2px solid black;
+        padding:20px 60px;
+    }
+`;
