@@ -66,7 +66,8 @@ export const Item = styled.div`
         }
         
     }
-    &:first-child{
+    &:first-child,
+    &:last-child{
         background-color: #eee;
     }`;
 
