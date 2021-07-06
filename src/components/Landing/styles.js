@@ -1,20 +1,21 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height:100vh;
-    width:90%;
+  
+    
 `;
 
 export const Logo = styled.img`
-    margin:50px 0;
+    height:150px;
+    display:block;
+    margin:50px auto;
 `;
 
 export const Wrapper = styled.div`
     display:flex;
-    
-    justify-content: space-between;
-    margin:0 auto;
-    margin-left:10%;
+    width:90%;
+    margin:auto;
+
     
 `;
 
@@ -54,7 +55,7 @@ export const ItemLeft = styled.div`
     background-color:#eee;
     padding:120px;
     min-width:500px;
-    min-height:400px;
+    min-height:500px;
 `;
 
 export const ItemRight = styled.div`
@@ -68,14 +69,15 @@ export const Slider = styled.div`
 export const Banner = styled.div`
     display:flex;
     justify-content:space-between;
-    margin-left:12%;
+    width:90%;
+    margin:0 auto;
     margin-top:80px;
  
 `;
 
 export const Image = styled.img`
-    height:250px;
-    width:400px;
+    height:350px;
+    width:550px;
 `;
 
 export const BannerText = styled.h1``;
@@ -100,14 +102,15 @@ export const ImageBanner = styled.div`
     left:50%;
     transform:translate(-50%,-50%);
     z-index:2;
-    font-size:50px;
+    font-size:80px;
+    font-weight:800;
     font-family: 'Herr Von Muellerhoff', cursive;
     color:#2b8068;
-    padding:60px 80px;
+    padding:60px 60px;
     background-color:rgba(255,255,255,.7);
 
     span{
-        border:2px solid black;
-        padding:20px 60px;
+        border:2px solid #2b8068;
+        padding:20px 80px;
     }
 `;

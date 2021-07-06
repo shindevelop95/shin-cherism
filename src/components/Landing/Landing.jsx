@@ -21,8 +21,8 @@ function Landing() {
                     <Slider>
                         <SimpleImageSlider
                             style={{ border: "none" }}
-                            width={1100}
-                            height={620}
+                            width={1230}
+                            height={720}
                             images={images}
                             showBullets={true}
                             slideDuration={0.5}
@@ -38,11 +38,11 @@ function Landing() {
                 </BannerWrap>
                 <BannerWrap>
                     <Image src={"../images/landing/landbanner2.jpg"} />
-                    <ImageBanner><span>Home</span></ImageBanner>
+                    <ImageBanner><span>Office</span></ImageBanner>
                 </BannerWrap>
                 <BannerWrap>
                     <Image src={"../images/landing/landbanner3.jpg"} />
-                    <ImageBanner><span>Home</span></ImageBanner>
+                    <ImageBanner><span>Garden</span></ImageBanner>
                 </BannerWrap>
             </Banner>
         </Container>
