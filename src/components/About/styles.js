@@ -20,6 +20,7 @@ export const Frame = styled.div`
     padding:80px 0;
     width:90%;
     margin:auto;
+    
 `;
 
 export const Title = styled.h1`
@@ -29,4 +30,50 @@ export const Title = styled.h1`
 
 export const Text = styled.p`
     font-size:25px;
+    width:${({width}) => width? width:null};
+   
+`;
+
+export const Image = styled.img`
+    height:${height => height ? height: null};
+    width:${width => width ? width: null};
+`;
+
+export const LeftGroup = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+`;
+
+export const RightGroup = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position:relative;
+
+    .abs{
+        position:absolute;
+        top:-1000px;
+        height:1000px;
+        width:900px;
+    }
+`;
+
+export const OuterGroup = styled.div`
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width:90%;
+    padding:80px 0;
+    margin:auto;
+
+`;
+
+export const Button = styled.button`
+    background-color:transparent;
+    border:none;
+    font-size:25px;
+    color:#2b8068;
 `;
