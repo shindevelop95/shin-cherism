@@ -61,6 +61,10 @@ export const ItemLeft = styled.div`
 export const ItemRight = styled.div`
     transform: translate(-20%, -5%);
     border:none;
+
+    @media (max-width: 768px) {
+    display:none;
+  }
 `;
 
 export const Slider = styled.div`
