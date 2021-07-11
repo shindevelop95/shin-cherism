@@ -16,6 +16,10 @@ export const Wrapper = styled.div`
     width:90%;
     margin:auto;
 
+    @media (max-width: 768px) {
+        width:100%;
+  }
+
     
 `;
 
@@ -29,7 +33,12 @@ export const Header = styled.h1`
     width:440px;
     text-align: start;
     top:10%;
-    left:15%
+    left:15%;
+    @media (max-width: 768px) {
+        left:6%;
+        font-size:50px;
+        text-align: center;
+  }
 `;
 
 export const Button = styled.button`
@@ -48,6 +57,14 @@ export const Button = styled.button`
         font-size:50px;
         margin-left: 20px;
     }
+
+    @media (max-width: 768px) {
+        margin:0 auto;
+        margin-top:250px;
+        font-size:20px;
+        padding:10px 20px;
+        
+  }
 `;
 
 export const ItemLeft = styled.div`
@@ -56,6 +73,13 @@ export const ItemLeft = styled.div`
     padding:120px;
     min-width:500px;
     min-height:500px;
+
+    @media (max-width: 768px) {
+       width:100%;
+       height:100%;
+       padding:0;
+       margin:auto;
+  }
 `;
 
 export const ItemRight = styled.div`
@@ -76,6 +100,11 @@ export const Banner = styled.div`
     width:90%;
     margin:0 auto;
     margin-top:80px;
+    @media (max-width: 768px) {
+        flex-direction:column;
+        width:100%;
+        
+  }
  
 `;
 
@@ -98,6 +127,13 @@ export const BannerWrap = styled.div`
         left:0;
         background-color:rgba(0,0,0,.3);
     }
+
+    @media (max-width: 768px) {
+        flex-direction:column;
+        width:100%;
+        margin-bottom:10px;
+        
+  }
 `;
 
 export const ImageBanner = styled.div`
