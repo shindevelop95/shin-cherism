@@ -6,7 +6,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ClearIcon from '@material-ui/icons/Clear';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input } from './styles'
+import {IconButton,Badge} from '@material-ui/core';
+import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
 function Nav() {
 
@@ -22,6 +23,7 @@ function Nav() {
                 <Group>
                     <Button>
                         <FacebookIcon />
+                        
                     </Button>
                     <Button>
                         <TwitterIcon />
@@ -31,7 +33,7 @@ function Nav() {
                     </Button>
                 </Group>
                 <TextGroup>
-                   
+
                    { active? (<TextGroupInner className="active">
                         <Text>Shop</Text>
                         <Text>Bestseller</Text>
@@ -53,14 +55,18 @@ function Nav() {
                     <Button>
                         <SearchIcon />
                     </Button>
+                   
                     <Button>
-                        <ShoppingCartIcon />
+                        <Badge badgeContent={4} color="secondary">
+                            <ShoppingCartIcon />
+                        </Badge>
                     </Button>
+                   
                 </Group>
             </Wrapper>
-            <span>
-                {active? <ClearIcon onClick={() => setActive(active => !active)}/>:<MenuIcon onClick={() => setActive(active => !active)}/>}
-            </span>
+                 <ButtonToggle>  
+                    {active? <ClearIcon onClick={() => setActive(active => !active)}/>:<MenuIcon onClick={() => setActive(active => !active)}/>}
+                </ButtonToggle> 
         </Container>
     )
 }

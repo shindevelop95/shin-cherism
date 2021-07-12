@@ -6,9 +6,7 @@ export const Container = styled.div`
     background-color:#91b9ae;
     padding:15px 0;
     
-    span{
-        display:none;
-    }
+    
     
     @media (max-width: 768px) {
         height:20px;
@@ -120,5 +118,13 @@ export const Text = styled.h3`
     }`;
 
 export const Input = styled.input``;
+
+export const ButtonToggle = styled.div`
+    display:none;
+    @media (max-width: 768px) {
+        display:block;
+       
+  }
+`;
 
 
