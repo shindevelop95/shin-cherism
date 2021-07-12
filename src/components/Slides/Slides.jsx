@@ -1,14 +1,14 @@
 import React from 'react'
 import '../../utils/styles.css'
 import '../../utils/main'
-import {NewContainer, Wrapper,Image, ItemImage,Frame, Title, Text, Button, Item} from './styles'
+import {NewContainer,Wrapper,Image, ItemImage,Frame, Title, Text, Button, Item,Slide, SlideShow} from './styles'
 import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
 
 function Slides() {
     return (
         <NewContainer>
             <Wrapper>
-            <div className="slideshow">
+            <SlideShow className="slideshow">
                 <div>
                     <Image src="../images/slides/s1.jpg"/>
                 </div>
@@ -18,7 +18,7 @@ function Slides() {
                 <div>
                     <Image src="../images/slides/s3.jpg"/>
                 </div>
-            </div>
+            </SlideShow>
             <Frame>
                 <Item>
                     <Title>New Arrivals</Title>

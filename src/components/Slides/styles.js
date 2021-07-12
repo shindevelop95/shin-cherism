@@ -12,6 +12,9 @@ export const Wrapper = styled.div`
     align-items:center;
     justify-content: space-evenly;
     margin:0 auto;
+    @media (max-width:768px){
+        flex-direction:column;
+     }
 `;
 
 export const Image = styled.img`
@@ -34,6 +37,13 @@ export const Title = styled.h3`
     color:#2b8068;
     text-transform:uppercase;
     margin-top:120px;
+
+    @media (max-width:768px){
+         font-size:20px;
+         margin-top:80px;
+         padding-left: initial;
+         text-align:center;
+     }
    
 `;
 
@@ -43,6 +53,14 @@ export const Text = styled.p`
     padding-left:60px;
     text-align:start;
     font-weight:800;
+
+     @media (max-width:768px){
+         padding-left: initial;
+         font-size:20px;
+         text-align:center;
+         width:initial;
+
+     }
 `;
 
 export const Button = styled.button``;
@@ -69,9 +87,34 @@ export const Item = styled.div`
     &:first-child,
     &:last-child{
         background-color: #eee;
-    }`;
+    }
+    @media (max-width:768px){
+         height:250px;
+         width:250px;
+         .MuiSvgIcon-root{
+            margin-top:30px;
+         }
+     }
+    `;
+
+export const SlideShow = styled.div`
+     @media (max-width:768px){
+         img{
+            height:500px;
+            width:500px;
+         }
+         height:500px;
+         width:500px;
+         margin-bottom:50px;
+     }
+`;
 
 export const ItemImage = styled.img`
     height:400px;
     width:400px;
+
+    @media(max-width:768px){
+        height:250px;
+        width:250px;
+    }
 `;
