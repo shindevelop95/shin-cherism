@@ -9,7 +9,7 @@ function About() {
             <Container>
                 <Frame>
                     <Group>
-                        <VideoPlayer src="../videos/red.mp4" poster={poster} width="830" height="580"/>
+                        <VideoPlayer className="video" src="../videos/red.mp4" poster={poster} width="830" height="580"/>
                     </Group>
                     <Group>
                         <Title>About Us</Title>

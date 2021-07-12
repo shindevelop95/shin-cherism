@@ -3,6 +3,10 @@ import styled from 'styled-components/macro'
 export const Container = styled.div`
     margin-top:200px;
     background-color:#eee;
+    @media (max-width:768px){
+        width:100%;
+}
+
 `;
 
 export const Group = styled.div`
@@ -10,6 +14,14 @@ export const Group = styled.div`
   
     .video-js{
         margin-left:auto;
+    }
+    @media (max-width:768px){
+        .video-js{
+        
+        margin-left:initial;
+        margin:auto;
+    }
+    width:100%;
     }
 `;
 
@@ -20,17 +32,37 @@ export const Frame = styled.div`
     padding:80px 0;
     width:90%;
     margin:auto;
+    @media (max-width:768px){
+        .video-js{
+        width:600px;
+    }
+    width:initial;
+    flex-direction:column;
+}
     
 `;
 
 export const Title = styled.h1`
     font-size:50px;
     color:#2b8068;
+
+    @media (max-width:768px){
+       font-size:30px;
+       text-align:center;
+       margin-top:50px;
+    }
 `;
 
 export const Text = styled.p`
     font-size:25px;
     width:${({width}) => width? width:null};
+    @media (max-width:768px){
+        
+       font-size:20px;
+       width:400px;
+       text-align:center;
+       margin:auto;
+    }
    
 `;
 
