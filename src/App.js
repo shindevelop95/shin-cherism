@@ -8,14 +8,41 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { SettingsApplicationsRounded } from '@material-ui/icons';
 
 function App() {
+
+  const [products, setProducts] = useState([]);
+  const [cart,setCart] = useState({});
+  const fetchProducts = async () => {
+    const { data } = await commerce.products.list();
+
+    setProducts(data);
+  };
+
+  const fetchCart = async () => {
+    setCart(await commerce.cart.retrieve());
+  }
+
+  const handleAddToCart = async(productId, quantity) => {
+    const item = await commerce.cart.add(productId, quantity);
+    setCart(item.cart);
+  }
+
+  useEffect(() => {
+    fetchProducts();
+    fetchCart();
+  }, []);
+
+  console.log(products);
+  console.log("Show me the cart", cart)
   return (
     <div className="App">
       <Router>
+      <Nav totalItems={cart.total_items}/>
         <Switch>
           <Route path="/product">
-            <Products/>
+            <Products products={products} onAddToCart={handleAddToCart}/>
           </Route>
           <Route path="/">
             <Nav />

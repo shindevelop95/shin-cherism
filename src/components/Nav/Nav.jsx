@@ -9,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {IconButton,Badge} from '@material-ui/core';
 import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
-function Nav() {
+function Nav({totalItems}) {
 
     const [active, setActive] = useState(false);
     
@@ -57,7 +57,7 @@ function Nav() {
                     </Button>
                    
                     <Button>
-                        <Badge badgeContent={4} color="secondary">
+                        <Badge badgeContent={totalItems} color="secondary">
                             <ShoppingCartIcon />
                         </Badge>
                     </Button>
