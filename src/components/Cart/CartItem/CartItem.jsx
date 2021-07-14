@@ -1,6 +1,6 @@
 import React from 'react'
-import {Container, Frame, ImageFrame, Title, Image, Group, Text, Button} from './styles'
-import CancelIcon from '@material-ui/icons/Cancel';
+import {Container, Frame, InputButton, TextInput, Title,PriceText, Image, Group, Text, Button} from './styles'
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 const CartItem = ({item, handleUpdateCartQty, handleRemoveFromCart}) => {
     console.log("Show me the item info",item);
     return (
@@ -13,14 +13,16 @@ const CartItem = ({item, handleUpdateCartQty, handleRemoveFromCart}) => {
                     <Text>{item.name}</Text>
                </Group>
                <Group>  
-                   <Button onClick={() => handleUpdateCartQty(item.id, item.quantity - 1)}>-</Button>
-                   <Text>{item.quantity}</Text>
-                   <Button onClick={() => handleUpdateCartQty(item.id, item.quantity + 1)}>+</Button>
+                   <InputButton onClick={() => handleUpdateCartQty(item.id, item.quantity + 1)}>+</InputButton>
+                   <TextInput>{item.quantity}</TextInput>
+                   <InputButton onClick={() => handleUpdateCartQty(item.id, item.quantity - 1)}>-</InputButton>
                </Group>
                 <Group>
-                    <Text>{item.line_total.formatted_with_symbol}</Text>
+                    <PriceText>{item.line_total.formatted_with_symbol}</PriceText>
                 </Group>
-                <CancelIcon onClick={() => handleRemoveFromCart(item.id)}/>
+                <Group>
+                    <DeleteForeverIcon onClick={() => handleRemoveFromCart(item.id)}/>
+                </Group>
            </Frame>
        </Container>
     )

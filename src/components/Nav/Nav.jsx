@@ -60,7 +60,7 @@ function Nav({totalItems}) {
                         <SearchIcon />
                     </Button>
                    
-                    {location.pathname === '/' && (
+                    {location.pathname !== '/cart' && (
                         <Link to="/cart">
                             <Button>
                                 <Badge badgeContent={totalItems} color="secondary">

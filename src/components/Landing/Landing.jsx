@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, ItemLeft, ItemRight, Logo, Slider, Wrapper, Header, Button, Banner, ImageBanner, BannerWrap, Image } from './styles'
 import SimpleImageSlider from "react-simple-image-slider";
 import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
-
+import {Link} from 'react-router-dom'
 const images = [
     { url: "../images/landing/landing1.jpg" },
     { url: "../images/landing/landbanner2.jpg" },
@@ -15,7 +15,9 @@ function Landing() {
             <Wrapper>
                 <ItemLeft>
                     <Header>Potted plants delivered to your door</Header>
-                    <Button>Shop Now <TrendingFlatIcon /></Button>
+                    <Link style={{textDecoration:'none'}} to='/product'>
+                        <Button>Shop Now <TrendingFlatIcon /></Button>
+                    </Link>
                 </ItemLeft>
                 <ItemRight>
                     <Slider>
