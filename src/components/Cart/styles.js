@@ -43,10 +43,11 @@ export const Title = styled.h1`
     }
  `
 
-export const TextFrame = styled.div`
-    width:80%;
+export const TextFrame = styled.div`width:80%;
     display:flex;
     color:#2b8068;
    
 `;
+
+export const Button = styled.button``;
 

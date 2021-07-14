@@ -7,11 +7,15 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ClearIcon from '@material-ui/icons/Clear';
 import MenuIcon from '@material-ui/icons/Menu';
 import {IconButton,Badge} from '@material-ui/core';
+import {Link, useLocation} from 'react-router-dom'
 import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
 function Nav({totalItems}) {
 
     const [active, setActive] = useState(false);
+    const location = useLocation();
+
+    
     
     const handleMenu = (e) =>{
         e.preventDefault();
@@ -56,11 +60,15 @@ function Nav({totalItems}) {
                         <SearchIcon />
                     </Button>
                    
-                    <Button>
-                        <Badge badgeContent={totalItems} color="secondary">
-                            <ShoppingCartIcon />
-                        </Badge>
-                    </Button>
+                    {location.pathname === '/' && (
+                        <Link to="/cart">
+                            <Button>
+                                <Badge badgeContent={totalItems} color="secondary">
+                                    <ShoppingCartIcon />
+                                </Badge>
+                            </Button>
+                        </Link>
+                    )}
                    
                 </Group>
             </Wrapper>

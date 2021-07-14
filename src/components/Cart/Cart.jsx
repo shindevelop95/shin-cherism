@@ -1,18 +1,24 @@
 import React from 'react'
 import { Typography} from '@material-ui/core';
-import {Container, Frame,Title,Wrapper, TextFrame, Logo, Header} from './styles'
+import {Container, Frame,Title,Wrapper,TextFrame, Logo, Header, Button} from './styles'
 import CartItem from './CartItem/CartItem'
-const Cart = ({cart}) => {
+import {Link} from 'react-router-dom'
+
+const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}) => {
     console.log("In cart",cart);
 
     const EmptyCart = () => (
-        <Typography variant="subtitle1">You have no items in your shopping cart, start adding some</Typography>
+        <Typography variant="subtitle1">You have no items in your shopping cart, 
+            <Link to="/">Start adding some</Link>
+        </Typography>
     )
 
     const FilledCart = () => (
         <>
             <Container>
+            <Link to="/">
             <Logo src="../images/logo.png" alt="logo" />
+            </Link>
                 <Wrapper>
                     <Header>Shopping Basket</Header>
                     <TextFrame>
@@ -24,10 +30,11 @@ const Cart = ({cart}) => {
                     </TextFrame>
                     {cart.line_items.map((item) => (
                         <Frame>
-                            <CartItem item={item}/>
+                            <CartItem key={item.id} item={item} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart}/>
                         </Frame>
                     ))}
                 </Wrapper>
+                <Button onClick={handleEmptyCart}>Empty Cart</Button>
             </Container>
         </>
     )

@@ -1,32 +1,26 @@
 import React from 'react'
 import {Container, Frame, ImageFrame, Title, Image, Group, Text, Button} from './styles'
 import CancelIcon from '@material-ui/icons/Cancel';
-const CartItem = ({item}) => {
-    console.log(item);
+const CartItem = ({item, handleUpdateCartQty, handleRemoveFromCart}) => {
+    console.log("Show me the item info",item);
     return (
        <Container>
            <Frame>
-               <Group>
-                   
-               
+               <Group>    
                     <Image src={item.media.source}/>
-              
                </Group>
-               <Group>
-                   
+               <Group>   
                     <Text>{item.name}</Text>
                </Group>
-               <Group>
-                   
-                   <Button>-</Button>
+               <Group>  
+                   <Button onClick={() => handleUpdateCartQty(item.id, item.quantity - 1)}>-</Button>
                    <Text>{item.quantity}</Text>
-                   <Button>+</Button>
+                   <Button onClick={() => handleUpdateCartQty(item.id, item.quantity + 1)}>+</Button>
                </Group>
                 <Group>
-                   
-                    <Text>{item.price.formatted_with_symbol}</Text>
+                    <Text>{item.line_total.formatted_with_symbol}</Text>
                 </Group>
-                <CancelIcon/>
+                <CancelIcon onClick={() => handleRemoveFromCart(item.id)}/>
            </Frame>
        </Container>
     )
