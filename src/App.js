@@ -1,7 +1,7 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
 import {commerce} from './lib/commerce'; 
-import { About,Feature,Footer,Landing,Nav,Products,Slides, Cart } from './components';
+import { About,Feature,Footer,Landing,Nav,Products,Slides,Cart, Checkout } from './components';
 import {
   BrowserRouter as Router,
   Switch,
@@ -66,6 +66,9 @@ function App() {
                 handleRemoveFromCart={handleRemoveFromCart} 
                 handleEmptyCart={handleEmptyCart} 
             />
+          </Route>
+          <Route path="/checkout">
+            <Checkout cart={cart}/>
           </Route>
           <Route path="/">
             <Landing />

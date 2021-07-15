@@ -50,7 +50,9 @@ const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}
                 </PriceWrapper>
                 <ButtonGroup>
                     <CartButton onClick={handleEmptyCart}>Empty Cart</CartButton>
-                    <CartButton >Proceed</CartButton>
+                    <Link to="/checkout">
+                        <CartButton >Proceed</CartButton>
+                    </Link>
                 </ButtonGroup>
                 </Wrapper>
                 <Footer/>

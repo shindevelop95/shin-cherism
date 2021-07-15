@@ -6,3 +6,4 @@ export {default as Nav} from './Nav/Nav';
 export {default as Products} from './Products/Products'
 export {default as Slides} from './Slides/Slides'
 export {default as Cart } from './Cart/Cart'
+export {default as Checkout} from './CheckoutForm/Checkout/Checkout'
