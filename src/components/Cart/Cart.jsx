@@ -33,8 +33,8 @@ const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}
                     
                     </TextFrame>
                     {cart.line_items.map((item) => (
-                        <Frame>
-                            <CartItem key={item.id} item={item} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart}/>
+                        <Frame key={item.id}>
+                            <CartItem  item={item} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart}/>
                         </Frame>
                     ))}
                     <PriceWrapper>
