@@ -20,7 +20,7 @@ console.log("Show me the product", product);
                         {product.price.formatted_with_symbol}
                     </Typography>
                 </div>
-                <Typography dangerouslySetInnerHTML={{__html:product.description}} variant="p" color="textSecondary"></Typography>
+                <Typography dangerouslySetInnerHTML={{__html:product.description}} variant="body1" color="textSecondary"></Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.cardActions}>
                 <IconButton aria-label = "Add to Cart" onClick={() => onAddToCart(product.id,1)}>

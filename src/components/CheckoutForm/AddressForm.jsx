@@ -1,4 +1,3 @@
-  
 import React, { useState, useEffect } from 'react';
 import { InputLabel, Select, MenuItem, Button, Grid, Typography } from '@material-ui/core';
 import { useForm, FormProvider } from 'react-hook-form';
@@ -17,8 +16,9 @@ const AddressForm = ({ checkoutToken, next }) => {
   const methods = useForm();
 
   const fetchShippingCountries = async (checkoutTokenId) => {
+    console.log('show me the checkouttoken in addressform', checkoutTokenId);
     const { countries } = await commerce.services.localeListShippingCountries(checkoutTokenId);
-
+    console.log("show me the countris",countries)
     setShippingCountries(countries);
     setShippingCountry(Object.keys(countries)[0]);
   };
@@ -32,9 +32,9 @@ const AddressForm = ({ checkoutToken, next }) => {
 
   const fetchShippingOptions = async (checkoutTokenId, country, stateProvince = null) => {
     const options = await commerce.checkout.getShippingOptions(checkoutTokenId, { country, region: stateProvince });
-
+    console.log("show me the ava options", options)
     setShippingOptions(options);
-    //setShippingOption(options[0].id);
+    setShippingOption(options[0].id);
   };
 
   useEffect(() => {
@@ -95,7 +95,7 @@ const AddressForm = ({ checkoutToken, next }) => {
           <br />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <Button component={Link} variant="outlined" to="/cart">Back to Cart</Button>
-            <Button type="submit" variant="contained" color="primary">Next</Button>
+            <Button type="submit" variant="contained" color="primary">next</Button>
           </div>
         </form>
       </FormProvider>
