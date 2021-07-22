@@ -50,8 +50,25 @@ export const Wrapper = styled.div`
     align-items: center;
     width:90%;
     margin:auto;
-  
- 
+`;
+
+export const Input = styled.input`
+    width:${({search}) => search? '260px':'0px'};
+    opacity:${({search}) => search? '1':'0'};
+    height:29px;
+    padding:5px 15px;
+    color:#eee;
+    transition:.5s;
+    border-radius:10px;
+    background-color:transparent;
+    border:2px solid #eee;
+    &:focus{
+        outline:none;
+    }
+    ::placeholder{
+        color:#eee;
+        font-size:15px;
+    }
 `;
 
 export const Group = styled.div`
@@ -123,7 +140,6 @@ export const Text = styled.h3`
         transform:scale(1.2);
     }`;
 
-export const Input = styled.input``;
 
 export const ButtonToggle = styled.div`
     display:none;

@@ -11,6 +11,7 @@ import {Link, useLocation} from 'react-router-dom'
 import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
 function Nav({totalItems}) {
+    const [search, setSearch] = useState(false);
     const [display, setDisplay] = useState(false);
     const [active, setActive] = useState(false);
     const location = useLocation();
@@ -64,7 +65,8 @@ function Nav({totalItems}) {
                     </TextGroupInner>)}
                 </TextGroup>
                 <Group>
-                    <Button>
+                    <Input placeholder="Search Here" search={search}/>
+                    <Button onClick={()=> setSearch(!search)}>
                         <SearchIcon />
                     </Button>
                    
