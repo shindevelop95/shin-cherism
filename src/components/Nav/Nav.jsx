@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -11,18 +11,29 @@ import {Link, useLocation} from 'react-router-dom'
 import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
 function Nav({totalItems}) {
-
+    const [display, setDisplay] = useState(false);
     const [active, setActive] = useState(false);
     const location = useLocation();
 
-    
+    useEffect(() => {
+        window.addEventListener("scroll",() => {
+            if(window.scrollY > 10){
+                setDisplay(true);
+            }else
+                setDisplay(false);
+             });
+
+            return() => {
+                window.removeEventListener("scroll", null);
+            }
+        },[])
     
     const handleMenu = (e) =>{
         e.preventDefault();
         
     } 
     return (
-        <Container>
+        <Container display={display}>
             <Wrapper>
                 <Group>
                     <Button>
@@ -54,9 +65,6 @@ function Nav({totalItems}) {
                 </TextGroup>
                 <Group>
                     <Button>
-                        <Text>Register</Text>
-                    </Button>
-                    <Button>
                         <SearchIcon />
                     </Button>
                    
@@ -79,4 +87,4 @@ function Nav({totalItems}) {
     )
 }
 
-export default Nav
+export default Nav;

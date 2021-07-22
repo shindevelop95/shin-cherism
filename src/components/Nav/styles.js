@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-
+    position:sticky;
+    top:0;
+    z-index:1000;
     width:100%;
-    background-color:#91b9ae;
+    background-color:${({display}) => display? 'rgba(43,128,104,.9)':'#91b9ae'};
     padding:15px 0;
-    
-    
-    
+  
     @media (max-width: 768px) {
         height:20px;
         padding:30px 0;
@@ -101,7 +101,11 @@ export const Button = styled.button`
     font-size:20px;
     border:none;
     margin-right:10px;
-
+    cursor:pointer;
+    transition:.5s;
+    &:hover{
+        transform:scale(1.2);
+    }
     .MuiSvgIcon-root{
         height:40px;
         width:40px;
@@ -112,6 +116,8 @@ export const Button = styled.button`
 
 export const Text = styled.h3`
     transition:.5s;
+    font-size:25px;
+    cursor: pointer;
 
     &:hover{
         transform:scale(1.2);
