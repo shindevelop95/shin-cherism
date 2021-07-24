@@ -35,9 +35,10 @@ export const Header = styled.h1`
     top:10%;
     left:15%;
     @media (max-width: 768px) {
-        left:6%;
+       position:initial;
         font-size:50px;
         text-align: center;
+        width:initial;
   }
 `;
 
@@ -60,7 +61,7 @@ export const Button = styled.button`
 
     @media (max-width: 768px) {
         margin:0 auto;
-        margin-top:250px;
+        margin-top:initial;
         font-size:20px;
         padding:10px 20px;
         
@@ -78,6 +79,8 @@ export const ItemLeft = styled.div`
        width:100%;
        height:100%;
        padding:0;
+       min-width:initial;
+       min-height:initial;
        margin:auto;
   }
 `;
@@ -111,13 +114,7 @@ export const Banner = styled.div`
 export const Image = styled.img`
     height:350px;
     width:550px;
-`;
 
-export const BannerText = styled.h1``;
-
-export const BannerWrap = styled.div`
-    position:relative;
-    
     &:after{
         content:'';
         position:absolute;
@@ -127,6 +124,18 @@ export const BannerWrap = styled.div`
         left:0;
         background-color:rgba(0,0,0,.3);
     }
+    @media (max-width: 768px) {
+       height:330px;
+       width:100%;  
+  }
+`;
+
+export const BannerText = styled.h1``;
+
+export const BannerWrap = styled.div`
+    position:relative;
+    
+   
 
     @media (max-width: 768px) {
         flex-direction:column;

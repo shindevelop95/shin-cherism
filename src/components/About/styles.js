@@ -16,12 +16,12 @@ export const Group = styled.div`
         margin-left:auto;
     }
     @media (max-width:768px){
+        width:100%;
         .video-js{
-        
-        margin-left:initial;
-        margin:auto;
-    }
-    width:100%;
+            margin-left:initial;
+            margin:auto;
+            height:300px;
+        }
     }
 `;
 
@@ -34,12 +34,11 @@ export const Frame = styled.div`
     margin:auto;
     @media (max-width:768px){
         .video-js{
-        width:600px;
+        width:100%;
     }
     width:initial;
     flex-direction:column;
-}
-    
+}  
 `;
 
 export const Title = styled.h1`
@@ -58,8 +57,8 @@ export const Text = styled.p`
     width:${({width}) => width? width:null};
     @media (max-width:768px){
         
-       font-size:20px;
-       width:400px;
+       font-size:15px;
+       width:100%;
        text-align:center;
        margin:auto;
     }
