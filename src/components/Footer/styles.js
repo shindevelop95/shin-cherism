@@ -58,7 +58,9 @@ export const LetterGroup = styled.div`
     right:0;
     top:-90%;
     width:1200px;
-
+    @media (max-width: 768px) {
+        display:none;
+  }
 
 `;
 

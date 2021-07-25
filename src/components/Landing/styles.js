@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  
-    
+  width:100%;
 `;
 
 export const Logo = styled.img`
@@ -15,12 +14,9 @@ export const Wrapper = styled.div`
     display:flex;
     width:90%;
     margin:auto;
-
     @media (max-width: 768px) {
         width:100%;
-  }
-
-    
+  }  
 `;
 
 export const Header = styled.h1`
@@ -86,7 +82,7 @@ export const ItemLeft = styled.div`
 `;
 
 export const ItemRight = styled.div`
-    transform: translate(-20%, -5%);
+    transform: translate(0%, -5%);
     border:none;
 
     @media (max-width: 768px) {
@@ -134,9 +130,6 @@ export const BannerText = styled.h1``;
 
 export const BannerWrap = styled.div`
     position:relative;
-    
-   
-
     @media (max-width: 768px) {
         flex-direction:column;
         width:100%;
@@ -162,4 +155,14 @@ export const ImageBanner = styled.div`
         border:2px solid #2b8068;
         padding:20px 80px;
     }
+    @media (max-width: 768px) {
+       padding:40px 40px;
+
+        span{
+        border:2px solid #2b8068;
+        padding:10px 50px;
+    }
+        
+  }
+    
 `;

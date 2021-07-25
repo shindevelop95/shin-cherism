@@ -48,7 +48,8 @@ export const Title = styled.h1`
     @media (max-width:768px){
        font-size:30px;
        text-align:center;
-       margin-top:50px;
+       margin:auto;
+      
     }
 `;
 
@@ -56,18 +57,21 @@ export const Text = styled.p`
     font-size:25px;
     width:${({width}) => width? width:null};
     @media (max-width:768px){
-        
        font-size:15px;
        width:100%;
        text-align:center;
-       margin:auto;
+       margin:20px auto;
     }
-   
 `;
 
 export const Image = styled.img`
     height:${height => height ? height: null};
     width:${width => width ? width: null};
+    @media (max-width:768px){
+      height:500px;
+      width:100%;
+      margin-bottom:30px;
+    }
 `;
 
 export const LeftGroup = styled.div`
@@ -75,6 +79,9 @@ export const LeftGroup = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    @media (max-width:768px){
+       
+    }
 `;
 
 export const RightGroup = styled.div`
@@ -90,6 +97,15 @@ export const RightGroup = styled.div`
         height:1000px;
         width:900px;
     }
+
+    @media (max-width:768px){
+        flex-direction:column-reverse;
+      .abs{
+          display:none;
+          justify-content: center;
+          align-items: center;
+      }
+    }
 `;
 
 export const OuterGroup = styled.div`
@@ -100,6 +116,13 @@ export const OuterGroup = styled.div`
     padding:80px 0;
     margin:auto;
 
+    @media (max-width:768px){
+      width:initial;
+      margin:initial;
+      flex-direction:column;
+
+    }
+
 `;
 
 export const Button = styled.button`
@@ -107,4 +130,13 @@ export const Button = styled.button`
     border:none;
     font-size:25px;
     color:#2b8068;
+
+    @media (max-width:768px){
+      display:block;
+      margin:auto;
+      font-size:15px;
+      margin-bottom:20px;
+      
+      
+    }
 `;

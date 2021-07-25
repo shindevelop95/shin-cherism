@@ -27,8 +27,10 @@ function About() {
                 </LeftGroup>
                 <RightGroup>
                     <img className="abs" src="../images/landing/land-abs.png"/>
+                    <div>
                     <Title>Plant care workshop</Title>
                     <Text width="700px">psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
+                    </div>
                     <Image height="600px" width="900px"  src="../images/landing/land-l.jpg"/>
                 </RightGroup>
             </OuterGroup>

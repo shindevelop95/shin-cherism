@@ -22,13 +22,23 @@ export const Wrapper = styled.div`
 
 export const Image = styled.img`
     height:800px;
-    width:800px
+    width:800px;
+
+    @media (max-width:768px){
+        width:100%!important;
+        height:400px!important;
+     }
+
 `;
 
 export const Frame = styled.div`
     display:grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap:10px;
+
+    @media (max-width:768px){
+        grid-template-columns: repeat(1,1fr);
+     }
    
 `;
 
