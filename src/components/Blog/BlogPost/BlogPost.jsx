@@ -1,9 +1,11 @@
 import React from 'react'
 import { makeStyles,IconButton,Button, Card, Avatar, CardActions,CardContent, CardHeader, CardMedia, Typography } from '@material-ui/core'
-import {Container, Title, SubTitle, Text, Wrapper, Frame, Group, LeftGroup, RightGroup, Image, InstaFrame, InstaFrameInner, InstaText, InstaButton} from './styles'
+import {Container, Title, SubTitle, InstaInput, Text, Wrapper, Frame, Group, LeftGroup, RightGroup, Image, InstaFrame, InstaFrameInner, InstaText, InstaButton} from './styles'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import PublishIcon from '@material-ui/icons/Publish';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -11,11 +13,13 @@ const useStyles = makeStyles((theme) => ({
     },
 
     button:{
-        padding:'0 40px',
+        padding:'10px 40px',
+        fontSize:'15px',
     },
     wrapper:{
         display: 'flex',
         justifyContent:'space-between',
+        alignItems:'center',
     },
     media:{
         height:0,
@@ -32,7 +36,7 @@ function BlogPost() {
         <Container>
             <Wrapper>
                 <Title>Looking for some 'Cherisome' inspiration? Here are some blog about our house plants</Title>
-                <SubTitle>Blog, ShinWang, Inspiration, Plants</SubTitle>
+                <SubTitle textAlign="center">Blog, ShinWang, Inspiration, Plants</SubTitle>
                <Group>
                <LeftGroup>
                <Text>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Text>
@@ -48,7 +52,7 @@ function BlogPost() {
                     }
                     title="cherismfestigram"
                     subheader="17 follower"/>
-                    <Button size="small" className={classes.button} variant="contained" color="primary" disableElevation>View Profile</Button>
+                    <Button xs={0} size="small" className={classes.button}  variant="contained" color="primary" disableElevation>View Profile</Button>
                    </CardContent>
                     <CardMedia className={classes.media} image="../images/blog/b1.jpg" title="profile"/>
                     <CardActions disableSpacing>
@@ -56,6 +60,7 @@ function BlogPost() {
                             View More on Instagram
                         </Button>
                     </CardActions>
+                    <hr/>
                    <CardActions disableSpacing>
                    <IconButton size="small">
                             <FavoriteBorderIcon/>
@@ -75,8 +80,23 @@ function BlogPost() {
                           cherismfestigram
                         </Typography>
                     </CardContent>
+                    <hr/>
+                        <InstaInput placeholder="Add a comment..."/>
                 </Card>
                </LeftGroup>
+               <RightGroup>
+                   <Image src="../images/blog/b2.jpg"/>
+                   <Text>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                   </Text>
+                   <hr/>
+
+                   <Text fontWeight="bold">Follow us</Text>
+                    <FacebookIcon color="primary"/>
+                    <InstagramIcon color="secondary"/>
+                    <hr/>
+               </RightGroup>
                </Group>
             </Wrapper>
         </Container>
