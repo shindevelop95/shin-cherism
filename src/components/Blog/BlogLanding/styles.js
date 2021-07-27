@@ -27,20 +27,6 @@ export const Image = styled.img`
     }
 `;
 
-export const Header = styled.h1`
-    font-family: 'Herr Von Muellerhoff', cursive;
-    font-size:80px;
-    color:#2b8068;
-    line-height:0.8;
-    width:440px;
-    text-align: start;
-    @media (max-width: 768px) {
-        text-align: center;
-        width:initial;
-      
-  }
-`;
-
 export const Text = styled.p`
     font-size:30px;
     @media (max-width: 768px) {
