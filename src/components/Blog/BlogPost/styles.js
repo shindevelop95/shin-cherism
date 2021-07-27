@@ -5,14 +5,14 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size:50px;
+    font-size:40px;
     width:1000px;
     color:#2B8068;
     text-align:center;
     margin:0 auto;
 
     @media (max-width: 768px) {
-        font-size:30px;
+        font-size:40px;
         width:initial;
     }
 
@@ -24,13 +24,14 @@ export const SubTitle = styled.h3`
     text-align:${({textAlign}) => textAlign? textAlign:'start'};
     color:#2B8068;
     @media (max-width: 768px) {
-        font-size:20px;
+        font-size:30px;
         text-align:center;
     }
 `;
 
 export const Text = styled.p`
-    font-weight:${({fontWeight}) => fontWeight? fontWeight:null}
+    font-weight:${({fontWeight}) => fontWeight? fontWeight:null};
+    font-size:20px;
 `;
 
 export const Wrapper = styled.div`
