@@ -21,26 +21,26 @@ function Feature() {
                 </Frame>
                 </WrapperFirst>
             </Container>
-        <GalleryContainer>
-            <GalleryWrapper>
-            <Title align="center">Our plants in the wild</Title>
-            <GalleryFrame>
-            <OwlCarousel items={3}  
-                className="owl-theme"  
-                loop  
-                nav
-                margin={8}
-                autoplay ={true} 
-                >  
-                    {landingDataFour.map((item) => (
-                        <GalleryGroup key={item.id}>
-                            <GalleryImage src={item.url}/>
-                        </GalleryGroup>
-                    ))}
-                </OwlCarousel>
-            </GalleryFrame>
-            </GalleryWrapper>
-        </GalleryContainer>
+            <GalleryContainer>
+                <GalleryWrapper>
+                    <Title align="center">Our plants in the wild</Title>
+                    <GalleryFrame>
+                        <OwlCarousel items={3}  
+                            className="owl-theme"  
+                            loop  
+                            nav
+                            margin={12}
+                            autoplay ={true} 
+                            >  
+                                {landingDataFour.map((item) => (
+                                    <GalleryGroup key={item.id}>
+                                        <GalleryImage src={item.url}/>
+                                    </GalleryGroup>
+                                ))}
+                            </OwlCarousel>
+                    </GalleryFrame>
+                </GalleryWrapper>
+            </GalleryContainer>
         </>
     )
 }

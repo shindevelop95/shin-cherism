@@ -22,10 +22,10 @@ function Slides() {
                     <Text>A one stop shop for all indoor gardening essentials</Text>
                 </Item>
                 <Item data-aos="fade-down">
-                    <ItemImage src="../images/slides/s1.jpg"/>
+                    <ItemImage src="../images/slides/s5.jpg"/>
                 </Item>
                 <Item data-aos="fade-up">
-                    <ItemImage src="../images/slides/s1.jpg"/>
+                    <ItemImage src="../images/slides/s4.jpg"/>
                 </Item>
                 <Item data-aos="fade-up">
                     <TrendingFlatIcon/>

@@ -16,18 +16,13 @@ export const Container = styled.div`
         }
         
         .active{   
-            height:100%;
             display:block;
             color:white;
-            position:absolute;
             font-size:30px;
-            padding:200px 0;
-            top:0;
-            left:0;
-            width:100%;
             text-align:center;
             background-color:#91b9ae;
             z-index:30;
+            height:100vh;
         }
         .MuiSvgIcon-root{
             display:inline-block;
@@ -93,12 +88,10 @@ export const TextGroup = styled.div`
     
     @media (max-width: 768px) {
         flex-direction: column;
-        margin:auto;
-        margin-top:180px;
+        height:auto;
+        width:100%;
         cursor:pointer;
-       
-        
-     
+
   }
 `;
 
@@ -108,8 +101,7 @@ export const TextGroupInner = styled.div`
    align-items: center;
    
    @media (max-width: 768px) {
-        display:none;  
-       
+        display:none;
   }
 `;
 export const Button = styled.button`
@@ -138,7 +130,13 @@ export const Text = styled.h3`
 
     &:hover{
         transform:scale(1.2);
-    }`;
+    }
+    @media(max-width:768px){
+        &:first-child{
+            padding-top:140px;
+        }
+    }
+    `;
 
 
 export const ButtonToggle = styled.div`
