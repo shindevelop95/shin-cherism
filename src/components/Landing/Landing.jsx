@@ -1,31 +1,29 @@
 import React from 'react'
 import { Container, ItemLeft, ItemRight, Logo, Slider, Wrapper, Header, Button, Banner, ImageBanner, BannerWrap, Image } from './styles'
 import SimpleImageSlider from "react-simple-image-slider";
+import {landingData} from '../../fixtures/landingData'
 import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
 import {Link} from 'react-router-dom'
-const images = [
-    { url: "../images/landing/landing1.jpg" },
-    { url: "../images/landing/landbanner2.jpg" },
-    { url: "../images/landing/landbanner3.jpg" },
-]
+
 function Landing() {
     return (
         <Container>
             <Logo src="../images/logo.png" alt="logo" />
             <Wrapper>
-                <ItemLeft>
-                    <Header>Potted plants delivered to your door</Header>
+                <ItemLeft >
+                    <Header data-aos="fade-right"
+                    >Potted plants delivered to your door</Header>
                     <Link style={{textDecoration:'none'}} to='/product'>
-                        <Button>Shop Now <TrendingFlatIcon /></Button>
+                        <Button data-aos="fade-right" data-aos-duration="2000">Shop Now <TrendingFlatIcon /></Button>
                     </Link>
                 </ItemLeft>
                 <ItemRight>
-                    <Slider>
+                    <Slider> 
                         <SimpleImageSlider
                             style={{ border: "none" }}
                             width={1230}
                             height={720}
-                            images={images}
+                            images={landingData}
                             showBullets={true}
                             slideDuration={0.5}
                             showNavs
@@ -34,18 +32,12 @@ function Landing() {
                 </ItemRight>
             </Wrapper>
             <Banner>
-                <BannerWrap>
-                    <Image src={"../images/landing/landbanner.jpg"} />
-                    <ImageBanner><span>Home</span></ImageBanner>
-                </BannerWrap>
-                <BannerWrap>
-                    <Image src={"../images/landing/landbanner2.jpg"} />
-                    <ImageBanner><span>Office</span></ImageBanner>
-                </BannerWrap>
-                <BannerWrap>
-                    <Image src={"../images/landing/landbanner3.jpg"} />
-                    <ImageBanner><span>Garden</span></ImageBanner>
-                </BannerWrap>
+                {landingData.map((item) => (
+                    <BannerWrap key={item.id} data-aos={item.animate}>
+                        <Image src={item.url}/>
+                        <ImageBanner><span>{item.name}</span></ImageBanner>
+                    </BannerWrap>
+                ))}
             </Banner>
         </Container>
     )

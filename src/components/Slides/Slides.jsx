@@ -1,36 +1,33 @@
 import React from 'react'
 import '../../utils/styles.css'
 import '../../utils/main'
-import {NewContainer,Wrapper,Image, ItemImage,Frame, Title, Text, Button, Item,Slide, SlideShow} from './styles'
+import {landingDataTwo} from '../../fixtures/landingData'
+import {NewContainer,Wrapper,Image, ItemImage,Frame, Title, Text, Item, SlideShow} from './styles'
 import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
 
 function Slides() {
     return (
         <NewContainer>
             <Wrapper>
-            <SlideShow className="slideshow">
-                <div>
-                    <Image src="../images/slides/s1.jpg"/>
-                </div>
-                <div>
-                    <Image src="../images/slides/s2.jpg"/>
-                </div>
-                <div>
-                    <Image src="../images/slides/s3.jpg"/>
-                </div>
+            <SlideShow data-aos="fade-right" className="slideshow">
+                {landingDataTwo.map((item) => (
+                    <div key={item.id}>
+                        <Image src={item.url}/>
+                    </div>
+                ))}
             </SlideShow>
             <Frame>
-                <Item>
+                <Item data-aos="fade-down">
                     <Title>New Arrivals</Title>
                     <Text>A one stop shop for all indoor gardening essentials</Text>
                 </Item>
-                <Item>
+                <Item data-aos="fade-down">
                     <ItemImage src="../images/slides/s1.jpg"/>
                 </Item>
-                <Item>
+                <Item data-aos="fade-up">
                     <ItemImage src="../images/slides/s1.jpg"/>
                 </Item>
-                <Item>
+                <Item data-aos="fade-up">
                     <TrendingFlatIcon/>
                 </Item>
             </Frame>

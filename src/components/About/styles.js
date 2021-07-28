@@ -1,19 +1,20 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-    margin-top:200px;
-    background-color:#eee;
-    @media (max-width:768px){
+   margin-top:200px;
+   @media (max-width:768px){
         width:100%;
-}
+    }
+`;
 
+export const WrapperFirst = styled.div`
+    background-color:#eee;
 `;
 
 export const Group = styled.div`
     width:800px;
-  
     .video-js{
-        margin-left:auto;
+        margin:auto;
     }
     @media (max-width:768px){
         width:100%;
@@ -42,8 +43,9 @@ export const Frame = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size:50px;
+    font-size:40px;
     color:#2b8068;
+    text-transform:uppercase;
 
     @media (max-width:768px){
        font-size:30px;
@@ -57,7 +59,7 @@ export const Text = styled.p`
     font-size:25px;
     width:${({width}) => width? width:null};
     @media (max-width:768px){
-       font-size:15px;
+       font-size:25px;
        width:100%;
        text-align:center;
        margin:20px auto;
@@ -108,7 +110,7 @@ export const RightGroup = styled.div`
     }
 `;
 
-export const OuterGroup = styled.div`
+export const WrapperSecond = styled.div`
     display:flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -120,9 +122,7 @@ export const OuterGroup = styled.div`
       width:initial;
       margin:initial;
       flex-direction:column;
-
     }
-
 `;
 
 export const Button = styled.button`
@@ -136,7 +136,5 @@ export const Button = styled.button`
       margin:auto;
       font-size:15px;
       margin-bottom:20px;
-      
-      
     }
 `;

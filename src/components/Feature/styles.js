@@ -6,6 +6,7 @@ export const Container = styled.div`
     padding-bottom:200px;
 `;
 
+
 export const Frame = styled.div`
    display:flex;
    justify-content: space-between;
@@ -19,7 +20,7 @@ export const Frame = styled.div`
   }
 `;
 
-export const Wrapper = styled.div`
+export const WrapperFirst = styled.div`
      width:90%;
     margin:auto;
 `;

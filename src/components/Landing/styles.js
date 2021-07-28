@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {motion} from 'framer-motion'
 export const Container = styled.div`
   width:100%;
 `;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   }  
 `;
 
-export const Header = styled.h1`
+export const Header = styled(motion.h1)`
     font-family: 'Herr Von Muellerhoff', cursive;
     font-size:80px;
     color:#2b8068;
@@ -38,7 +38,7 @@ export const Header = styled.h1`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
     border:none;
     background-color: #906E2b;
     color:#eee;
@@ -64,7 +64,7 @@ export const Button = styled.button`
   }
 `;
 
-export const ItemLeft = styled.div`
+export const ItemLeft = styled(motion.div)`
     position:relative;
     background-color:#eee;
     padding:120px;
@@ -81,10 +81,9 @@ export const ItemLeft = styled.div`
   }
 `;
 
-export const ItemRight = styled.div`
+export const ItemRight = styled(motion.div)`
     transform: translate(0%, -5%);
     border:none;
-
     @media (max-width: 768px) {
     display:none;
   }
@@ -107,7 +106,7 @@ export const Banner = styled.div`
  
 `;
 
-export const Image = styled.img`
+export const Image = styled(motion.img)`
     height:350px;
     width:550px;
 
@@ -128,7 +127,7 @@ export const Image = styled.img`
 
 export const BannerText = styled.h1``;
 
-export const BannerWrap = styled.div`
+export const BannerWrap = styled(motion.div)`
     position:relative;
     @media (max-width: 768px) {
         flex-direction:column;

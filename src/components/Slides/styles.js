@@ -1,11 +1,10 @@
 import styled from 'styled-components/macro'
 
 export const NewContainer = styled.div`
-margin-top:300px;
-@media (max-width:768px){
+    margin-top:300px;
+    @media (max-width:768px){
         width:100%;
-     }
-
+    }
 `;
 
 export const Wrapper = styled.div`
@@ -21,8 +20,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    height:800px;
-    width:800px;
+    height:100%;
+    width:100%;
 
     @media (max-width:768px){
         width:100%!important;
@@ -52,7 +51,7 @@ export const Title = styled.h3`
     margin-top:120px;
 
     @media (max-width:768px){
-         font-size:20px;
+         font-size:30px;
          margin-top:80px;
          padding-left: initial;
          text-align:center;
@@ -76,7 +75,6 @@ export const Text = styled.p`
      }
 `;
 
-export const Button = styled.button``;
 
 export const Item = styled.div`
     .MuiSvgIcon-root{
