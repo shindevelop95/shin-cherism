@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Container, Inner, Frame, Image, Logo, Text, Input, Button} from './styles'
+import {Container, Inner, Frame, Image,Text, Input, Button} from './styles'
 import {Grid} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles';
 
@@ -17,7 +17,6 @@ function BlogLanding() {
     const classes = useStyles();
     return (
         <Container>
-            <Logo src="../images/logo.png" alt="logo" />
             <Frame>
                 <header>Blog</header>
                 <Inner>

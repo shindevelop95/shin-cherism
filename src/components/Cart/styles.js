@@ -13,29 +13,12 @@ export const Wrapper = styled.div`
  
 `;
 
-export const Logo = styled.img`
-     height:150px;
-    display:block;
-    margin:50px auto;
-`;
-export const Header = styled.h1`    font-family: 'Herr Von Muellerhoff', cursive;
-font-size:80px;
-color:#2b8068;
-line-height:0.8;
-text-align: start;
-
-@media (max-width: 768px) {
-    left:6%;
-    font-size:50px;
-    text-align: center;
-}`;
-
 export const Title = styled.h1`
     margin-right:150px;
     text-transform: uppercase;
     font-size:30px;
     &:nth-child(2){
-        margin-left:175px;
+        margin-left:245px;
     }
 
     &:nth-child(3){
@@ -43,14 +26,18 @@ export const Title = styled.h1`
     }
 
     &:nth-child(4){
-        margin-left:20px;
+       
     }
  `
 
 export const TextFrame = styled.div`width:80%;
     display:flex;
     color:#2b8068;
-   
+    margin-top:30px;
+
+    @media(max-width:768px){
+        display:none;
+    } 
 `;
 
 export const Button = styled.button`
@@ -82,26 +69,30 @@ export const Image = styled.img`
 export const SubTitle = styled.h1`
     display:block;
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:30px;
 `;
 
 export const PriceGroup = styled.div`
     display:flex;
     justify-content: space-between;
     align-items:center;
-    
-    
 `;
 
 export const Text = styled.h3`
     text-align: end;
+    font-size:30px;
 `;
 
 export const PriceWrapper = styled.div`
     width:20%;
     margin-left:auto;
     font-size:30px;
-      border-top:2px solid #2b8068;
+    border-top:2px solid #2b8068;
+    @media(max-width:768px){
+        margin-right:auto;
+        width:initial;
+        font-size:20px;
+    } 
     
 `;
 
@@ -111,19 +102,20 @@ export const ButtonGroup = styled.div`
     margin-left:auto;
     margin-top:50px;
     justify-content: space-between;
+    @media(max-width:768px){
+        margin-right:auto;
+        width:initial;
+    } 
 `;
 
 export const CartButton = styled.button`
     font-size:30px;
-  
-   
     text-decoration:none;
     background:none;
     border:2px solid #2b8068;
-    padding:30px;
+    padding:20px;
     border-radius:10px;
     width:300px;
-  
     color:#2b8068;
     cursor:pointer;
     transition:.5s;
@@ -132,4 +124,9 @@ export const CartButton = styled.button`
         background-color:#2b8068;
         transform:scale(1.1);
     }
+
+    @media(max-width:768px){
+        font-size:20px;
+        width:initial;
+    } 
 `;

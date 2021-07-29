@@ -1,24 +1,13 @@
 import React from 'react';
 import {Grid} from '@material-ui/core'
-import {Header} from './styles'
-import Nav from '../Nav/Nav'
 import Product from './Product/Product';
 import useStyles from './styles'
-import {Logo} from '../Landing/styles'
-import Footer from '../Footer/Footer'
-
-const products = [
-    {id:1, name:'Shoes', description:'Running shoes', price:'$5'},
-    {id:2, name: 'Macbook', description:'Apple macbook', price:'$10'}
-];
 
 const Products = ({products, onAddToCart}) => {
     const classes = useStyles();
     return(
-        <>
             <main className={classes.content}>
-                <Logo src="../images/logo.png" alt="logo" />
-                <Header>Potted plants delivered to your door</Header>
+                <header>Potted plants delivered to your door</header>
                     <div className={classes.toolbar}/>
                     <Grid container justify="center" spacing={4}>
                         {products.map((product) => (
@@ -28,8 +17,6 @@ const Products = ({products, onAddToCart}) => {
                         ))}
                     </Grid>
             </main>
-            <Footer/>
-        </>
     )
 }
 

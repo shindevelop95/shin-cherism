@@ -1,9 +1,7 @@
 import React from 'react'
-import { Typography} from '@material-ui/core';
-import {Container, Frame,Title, Text,SubTitle,Wrapper,Image,TextFrame, Logo, Header, Button, PriceGroup, PriceWrapper,CartButton, ButtonGroup} from './styles'
+import {Container, Frame,Title, Text,SubTitle,Wrapper,Image,TextFrame, Button, PriceGroup, PriceWrapper,CartButton, ButtonGroup} from './styles'
 import CartItem from './CartItem/CartItem'
 import {Link} from 'react-router-dom'
-import Footer from '../Footer/Footer'
 
 const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}) => {
     console.log("In cart",cart);
@@ -18,23 +16,18 @@ const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}
     )
 
     const FilledCart = () => (
-        <>
             <Container>
-            <Link to="/">
-            <Logo src="../images/logo.png" alt="logo" />
-            </Link>
                 <Wrapper>
-                    <Header>Shopping Basket</Header>
-                    <TextFrame>
+                    <header data-aos="fade-right">Shopping Basket</header>
+                    <TextFrame data-aos="fade-left">
                         <Title>Product</Title>
                         <Title>Description</Title>
                         <Title>Quantity</Title>
                         <Title>Amount</Title>
-                    
                     </TextFrame>
                     {cart.line_items.map((item) => (
                         <Frame key={item.id}>
-                            <CartItem  item={item} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart}/>
+                            <CartItem item={item} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart}/>
                         </Frame>
                     ))}
                     <PriceWrapper>
@@ -54,11 +47,8 @@ const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}
                         <CartButton >Proceed</CartButton>
                     </Link>
                 </ButtonGroup>
-                </Wrapper>
-                <Footer/>
-               
+                </Wrapper>       
             </Container>
-        </>
     )
 
     if(!cart.line_items) return 'Loading...';

@@ -13,15 +13,8 @@ console.log("Show me the product", product);
     return (
         
         <Card className={classes.root}>
-            <CardMedia className={classes.media} image={product.media.source} title={product.name}/>
-             <TopWrapper>
-                 <SubHeader>{product.price.formatted_with_symbol}</SubHeader>
-                <IconButton 
-                    onClick={() => setToggle(!toggle)}>
-                    {toggle? <FavoriteBorderIcon/> : <FavoriteIcon/>}
-                </IconButton>
-             </TopWrapper>
-             <BottomWrapper>
+            <CardMedia className={classes.media} image={product.media.source} title={product.name}>
+            <BottomWrapper>
                 <BottomInner>
                     <SubHeader color='#eee'>{product.name}</SubHeader>
                     <IconButton onClick={() => onAddToCart(product.id, 1)}>
@@ -29,6 +22,15 @@ console.log("Show me the product", product);
                     </IconButton>
                 </BottomInner>
              </BottomWrapper>
+            </CardMedia>
+             <TopWrapper>
+                 <SubHeader>{product.price.formatted_with_symbol}</SubHeader>
+                <IconButton 
+                    onClick={() => setToggle(!toggle)}>
+                    {toggle? <FavoriteBorderIcon/> : <FavoriteIcon/>}
+                </IconButton>
+             </TopWrapper>
+            
         </Card>
     )
 }

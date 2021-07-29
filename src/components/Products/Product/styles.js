@@ -5,12 +5,12 @@ import styled from 'styled-components/macro';
 export default makeStyles(() => ({
   root: {
     flexGrow:1,
-    minHeight:400,
+    height:'auto',
     position:'relative',
   },
   media: {
     height: 170,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '59.25%', // 16:9
   },
   cardActions: {
     display: 'flex',
@@ -48,9 +48,14 @@ export const TopWrapper = styled.div`
 `;
 
 export const SubHeader = styled.h3`
-  font-size:30px;
+  font-size:25px;
+  font-weight:normal;
   color:${({color}) => color? color : '#2B8068'};
-  width:400px;
+  width:300px;
+  @media (max-width: 768px) {
+       font-size:20px;
+       
+  }  
 `;
 
 export const BottomWrapper = styled.div`
@@ -59,6 +64,9 @@ export const BottomWrapper = styled.div`
   height:20%;
   bottom:0;
   width:100%;
+  @media (max-width: 768px) {
+    height:40%；
+  }
 `;
 
 
@@ -66,11 +74,11 @@ export const BottomInner = styled.div`
   display:flex;
   justify-content: space-between;
   width:90%;
-  margin:0 auto;
+  height:100%;
+  margin: auto;
   align-items:center;
   .MuiSvgIcon-root{
-    height:40px;
-    width:40px;
+    font-size:40px;
     color:#eee;
     cursor:pointer;
     transition:.5s;
@@ -79,5 +87,11 @@ export const BottomInner = styled.div`
   .MuiSvgIcon-root:hover{
     transform:scale(1.2);
   }
+
+  @media (max-width: 768px) {
+    .MuiSvgIcon-root{
+      font-size:30px!important;
+  }
+  }  
 
 `;

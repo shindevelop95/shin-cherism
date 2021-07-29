@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../Footer/Footer'
 import {Container} from './styles'
 import BlogLanding from './BlogLanding/BlogLanding'
 import BlogPost from './BlogPost/BlogPost'
@@ -10,7 +9,6 @@ function Blog() {
             <BlogLanding/>
             <BlogPost/>
             <BlogProfile/>
-            <Footer/>
         </Container>
     
     )

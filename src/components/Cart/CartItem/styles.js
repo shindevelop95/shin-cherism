@@ -7,47 +7,54 @@ export const Frame = styled.div`
     align-items:center;
     justify-content: space-between;
     margin-top:60px;
+    @media(max-width:768px){
+        flex-direction:column;
+    } 
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+     font-size:30px;
+     text-transform:uppercase;
+     width:${({width}) => width? width:null};
+     line-height:1.5;
+     text-align:start;
+
+     @media(max-width:768px){
+        text-align:center;
+    } 
+`;
+
+export const Text = styled.h3`
+  width:350px;
+  color:rgba(0,0,0,.7);
+  font-size:20px;
+  text-align:start;
+  @media(max-width:768px){
+        text-align:center;
+    } 
+`;
 
 export const Image = styled.img`
     width:400px;
-    height:400px;
+    height:300px;
   
 `;
 
 export const Group = styled.div`
-
-    &:nth-child(3){
-            padding:0 80px;
-            margin-right:40px;
-        }
     .MuiSvgIcon-root{
         color:#2b8068;
-        height:100px;
-        width:60px;
+       font-size:50px;
         transition:.5s;
         &:hover{
             transform: scale(1.1);
         }
-
     }
-`;
-
-export const Text = styled.h3`
-   font-size:30px;
-   width:380px;
-   line-height:1.5;
-   text-align:start;
-   margin-left:40px;
-`;
-
-export const PriceText= styled.h3`
-    padding:0 80px;
-    font-size:30px;
-    line-height:1.5;
-   text-align:center;
+    @media(max-width:768px){
+        &:nth-child(3){
+            display:flex;
+            align-items:center;
+        }
+    } 
 `;
 
 export const TextInput = styled.h3`
@@ -55,10 +62,6 @@ export const TextInput = styled.h3`
     border:2px solid #2b8068;
     padding:25px 15px;
  
-`;
-
-export const Button = styled.button`
-    
 `;
 
 export const InputButton = styled.button`
@@ -74,5 +77,11 @@ export const InputButton = styled.button`
     &:hover{
         transform:scale(1.1);
     }
+
+    @media(max-width:768px){
+     
+        font-size:20px;
+        padding:28px 0;
+    } 
 `;
 

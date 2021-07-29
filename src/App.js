@@ -72,6 +72,9 @@ function App() {
     <div className="App">
       <Router>
       <Nav totalItems={cart.total_items}/>
+          <Link to="/">
+                <img className="logo" src="images/logo.png" alt="logo" />
+            </Link>
         <AnimatePresence initial={false} exitBeforeEnter>
         <Switch>
           <Route path="/product">
@@ -101,9 +104,10 @@ function App() {
             <Slides/>
             <About/>
             <Feature/>
-            <Footer/>
+           
             </Route>
         </Switch>
+        <Footer/>
         </AnimatePresence>
       </Router>
     </div>

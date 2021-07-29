@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, ItemLeft, ItemRight, Logo, Slider, Wrapper, Header, Button, Banner, ImageBanner, BannerWrap, Image } from './styles'
+import { Container, ItemLeft, ItemRight, Slider, Wrapper, Header, Button, Banner, ImageBanner, BannerWrap, Image } from './styles'
 import SimpleImageSlider from "react-simple-image-slider";
 import {landingData} from '../../fixtures/landingData'
 import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
@@ -8,7 +8,6 @@ import {Link} from 'react-router-dom'
 function Landing() {
     return (
         <Container>
-            <Logo src="../images/logo.png" alt="logo" />
             <Wrapper>
                 <ItemLeft >
                     <Header data-aos="fade-right"

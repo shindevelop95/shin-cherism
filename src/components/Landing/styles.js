@@ -4,11 +4,6 @@ export const Container = styled.div`
   width:100%;
 `;
 
-export const Logo = styled.img`
-    height:150px;
-    display:block;
-    margin:50px auto;
-`;
 
 export const Wrapper = styled.div`
     display:flex;
