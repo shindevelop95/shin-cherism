@@ -4,6 +4,11 @@ export const Container = styled.div`
 
 `;
 
+export const Wrapper = styled.div`
+    width:90%;
+    margin:0 auto;
+`;
+
 export const Title = styled.h1`
     font-size:40px;
     width:1000px;
@@ -34,10 +39,7 @@ export const Text = styled.p`
     font-size:20px;
 `;
 
-export const Wrapper = styled.div`
-    width:90%;
-    margin:0 auto;
-`;
+
 
 export const Group = styled.div`
     display:flex;
@@ -45,7 +47,6 @@ export const Group = styled.div`
         flex-direction:column;
     }
 `;
-export const Frame = styled.div``;
 
 export const LeftGroup = styled.div`
     flex-basis:70%;
@@ -76,20 +77,14 @@ export const Image = styled.img`
     object-fit:contain;
 `;
 
-export const InstaFrame = styled.div``;
-
-export const InstaFrameInner = styled.div``;
-
-export const InstaText = styled.h3``;
-
-export const InstaButton = styled.button`
-   
-`;
-
 export const InstaInput = styled.input`
-    padding:10px 20px;
+    padding:20px 20px;
     border:none;
     font-size:15px;
+
+    &:focus{
+        outline:none;
+    }
 `;
 
 

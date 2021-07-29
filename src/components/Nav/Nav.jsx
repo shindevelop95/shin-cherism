@@ -53,13 +53,17 @@ function Nav({totalItems}) {
                    { active? (<TextGroupInner className="active">
                         <Text>Shop</Text>
                         <Text>Bestseller</Text>
-                        <Text>Blog</Text>
+                       <Link style={{textDecoration:'none', color:'#eee'}} to="/blog" >
+                         <Text>Blog</Text>
+                       </Link>
                         <Text>Contact</Text>
                         <Text>About Us</Text>
                     </TextGroupInner>):(<TextGroupInner>
                         <Text>Shop</Text>
                         <Text>Bestseller</Text>
-                        <Text>Blog</Text>
+                        <Link style={{textDecoration:'none',color:'#eee'}} to="/blog" >
+                         <Text>Blog</Text>
+                       </Link>
                         <Text>Contact</Text>
                         <Text>About Us</Text>
                     </TextGroupInner>)}

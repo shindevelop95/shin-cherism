@@ -1,6 +1,5 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
-import {AnimatePresence} from 'framer-motion';
 import {commerce} from './lib/commerce'; 
 import { About,Feature,Footer,Landing,Nav,Products,Slides,Cart, Checkout, Blog } from './components';
 import {
@@ -75,7 +74,6 @@ function App() {
           <Link to="/">
                 <img className="logo" src="images/logo.png" alt="logo" />
             </Link>
-        <AnimatePresence initial={false} exitBeforeEnter>
         <Switch>
           <Route path="/product">
             <Products products={products} onAddToCart={handleAddToCart}/>
@@ -108,7 +106,6 @@ function App() {
             </Route>
         </Switch>
         <Footer/>
-        </AnimatePresence>
       </Router>
     </div>
   );

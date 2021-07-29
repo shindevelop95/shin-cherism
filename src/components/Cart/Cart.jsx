@@ -26,11 +26,11 @@ const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}
                         <Title>Amount</Title>
                     </TextFrame>
                     {cart.line_items.map((item) => (
-                        <Frame key={item.id}>
+                        <Frame data-aos="zoom-in" key={item.id}>
                             <CartItem item={item} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart}/>
                         </Frame>
                     ))}
-                    <PriceWrapper>
+                    <PriceWrapper data-aos="fade-left">
                     <PriceGroup>
                         <Text>Subtotal</Text>
                         <Text>{cart.subtotal.formatted_with_symbol}</Text>

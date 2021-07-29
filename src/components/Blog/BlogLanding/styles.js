@@ -1,12 +1,13 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.div`
-    width:90%;
-    margin:0 auto;
+ 
+    
 `;
 
 export const Frame = styled.div`
-    
+       width:90%;
+       margin:0 auto;
 `;
 
 export const Inner = styled.div`
@@ -44,22 +45,4 @@ export const Input = styled.input`
        width:90%;
        margin-bottom:20px;
     }
-`;
-
-export const Button = styled.button`
-    font-size:30px;
-    color:#eee;
-    background-color:#91B9AE;
-    padding:10px 60px;
-    border:none;
-    @media (max-width: 768px) {
-        display:block;
-        margin:0 auto;
-    }
-`;
-
-export const Logo = styled.img`
-    height:150px;
-    display:block;
-    margin:50px auto;
 `;

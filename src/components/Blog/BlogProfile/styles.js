@@ -6,12 +6,12 @@ export const Container = styled.div`
 `;
 
 export const Frame = styled.div`
-    width:86%;
+    width:90%;
     margin:0 auto;
 `;
 
 export const Image = styled.img`
-    width:95%;
+    width:${({width}) => width? width:'100%'};
     height:auto;
     display:block;
     margin-left:${({marginLeft}) => marginLeft? marginLeft : null};
@@ -34,6 +34,7 @@ export const GroupItem = styled.div`
 export const Inner = styled.div`
     display:flex;
     align-items:center;
+    justify-content: space-between;
     margin:30px 0;
 
     @media (max-width: 768px){
@@ -45,21 +46,6 @@ export const Group = styled.div`
     flex:1;
      @media (max-width: 768px){
        width:100%;
-    }
-`;
-
-
-export const Button = styled.button`
-    font-size:30px;
-    display:${({display}) => display? display :null};
-    margin:0 auto;
-    color:#eee;
-    background-color:#91B9AE;
-    padding:10px 60px;
-    border:none;
-    @media (max-width: 768px) {
-        display:block;
-        margin:0 auto;
     }
 `;
 

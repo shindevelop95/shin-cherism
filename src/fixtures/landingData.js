@@ -1,3 +1,36 @@
+export const galleryData = [
+    {
+        id:"1",
+        "image":"../images/blog/b1.jpg",
+        "animate":"fade-left"
+    },
+    {
+        id:"2",
+        "image":"../images/blog/b2.jpg",
+        "animate":"fade-left"
+    },
+    {
+        id:"3",
+        "image":"../images/blog/b3.jpg",
+        "animate":"fade-left"
+    },
+    {
+        id:"4",
+        "image":"../images/blog/b4.jpg",
+        "animate":"fade-down"
+    },
+    {
+        id:"5",
+        "image":"../images/blog/b5.jpg",
+        "animate":"fade-down"
+    },
+    {
+        id:"6",
+        "image":"../images/blog/b6.jpg",
+        "animate":"fade-down"
+    },
+]
+
 export const landingData = [
     { "url": "../images/landing/landbanner1.jpg", "id":"1","name":"home",  "animate":"fade-up" },
     { "url": "../images/landing/landbanner2.jpg", "id":"2","name":"office","animate":"fade-down" },
