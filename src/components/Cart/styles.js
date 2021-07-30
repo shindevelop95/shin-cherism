@@ -30,7 +30,8 @@ export const Title = styled.h1`
     }
  `
 
-export const TextFrame = styled.div`width:80%;
+export const TextFrame = styled.div`
+    width:80%;
     display:flex;
     color:#2b8068;
     margin-top:30px;
@@ -39,15 +40,13 @@ export const TextFrame = styled.div`width:80%;
         display:none;
     } 
 `;
-
 export const Button = styled.button`
-    font-size:30px;
+    font-size:20px;
     display:block;
     margin:auto;
     text-decoration:none;
     background:none;
-    border:2px solid #2b8068;
-    padding:30px;
+    padding:20px;
     border-radius:10px;
     color:#2b8068;
     cursor:pointer;
@@ -62,7 +61,7 @@ export const Button = styled.button`
 export const Image = styled.img`
       display: block;
       margin:auto;
-      height:600px;
+      height:300px;
       object-fit: contain;
 `;
 
@@ -82,6 +81,7 @@ export const Text = styled.h3`
     text-align: end;
     font-size:30px;
 `;
+
 
 export const PriceWrapper = styled.div`
     width:20%;

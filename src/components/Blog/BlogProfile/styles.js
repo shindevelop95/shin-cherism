@@ -52,6 +52,7 @@ export const Group = styled.div`
 export const Title = styled.h1`
     font-size:30px;
     text-transform:uppercase;
+    width:90%;
     margin:40px 0;
     color:#2b8068;
      @media(max-width:768px){

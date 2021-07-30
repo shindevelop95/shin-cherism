@@ -33,21 +33,25 @@ export const Header = styled(motion.h1)`
   }
 `;
 
-export const Button = styled(motion.button)`
+export const Button = styled.button`
     border:none;
     background-color: #906E2b;
     color:#eee;
     font-size:30px;
-    padding:15px 25px;
+    padding:10px 25px;
     border-radius:10px;
     display:flex;
     align-items: center;
     margin-top: 250px;
     cursor:pointer;
-
+    transition:.5s;
     .MuiSvgIcon-root{
         font-size:50px;
         margin-left: 20px;
+    }
+
+    &:hover{
+      transform:scale(1.1);
     }
 
     @media (max-width: 768px) {
@@ -148,6 +152,7 @@ export const ImageBanner = styled.div`
     span{
         border:2px solid #2b8068;
         padding:20px 80px;
+        
     }
     @media (max-width: 768px) {
        padding:40px 40px;

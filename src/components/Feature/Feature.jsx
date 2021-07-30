@@ -29,7 +29,7 @@ function Feature() {
                             className="owl-theme"  
                             loop  
                             nav
-                            margin={12}
+                            margin={10}
                             autoplay ={true} 
                             >  
                                 {landingDataFour.map((item) => (

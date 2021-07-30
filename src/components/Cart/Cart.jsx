@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Frame,Title, Text,SubTitle,Wrapper,Image,TextFrame, Button, PriceGroup, PriceWrapper,CartButton, ButtonGroup} from './styles'
+import {Container,Button, Frame,Title, Text,SubTitle,Wrapper,Image,TextFrame,PriceGroup, PriceWrapper,CartButton, ButtonGroup} from './styles'
 import CartItem from './CartItem/CartItem'
 import {Link} from 'react-router-dom'
 
@@ -7,12 +7,11 @@ const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}
     console.log("In cart",cart);
 
     const EmptyCart = () => (
-        <>
-        <Image src="../images/cart/cart1.png" alt="shopping cart"/>
-        <SubTitle>You have no items in your shopping cart</SubTitle>
+        <Container data-aos="zoom-in">
+            <Image src="../images/cart/cart1.png" alt="shopping cart"/>
+            <SubTitle>You have no items in your shopping cart</SubTitle>
             <Link style={{textDecoration:'none'}} to="/"><Button>Start adding some</Button></Link>
-        
-        </>
+        </Container>
     )
 
     const FilledCart = () => (

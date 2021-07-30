@@ -8,8 +8,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+var id , to = "contact";
 function App() {
+ 
+
 
   const [products, setProducts] = useState([]);
   const [cart,setCart] = useState({});
@@ -70,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Nav totalItems={cart.total_items}/>
+      <Nav to={to} totalItems={cart.total_items}/>
           <Link to="/">
                 <img className="logo" src="images/logo.png" alt="logo" />
             </Link>
@@ -105,7 +107,7 @@ function App() {
            
             </Route>
         </Switch>
-        <Footer/>
+        <Footer id={id}/>
       </Router>
     </div>
   );

@@ -9,11 +9,11 @@ function Landing() {
     return (
         <Container>
             <Wrapper>
-                <ItemLeft >
-                    <Header data-aos="fade-right"
+                <ItemLeft data-aos="fade-right" data-aos-duration="2000">
+                    <Header 
                     >Potted plants delivered to your door</Header>
                     <Link style={{textDecoration:'none'}} to='/product'>
-                        <Button data-aos="fade-right" data-aos-duration="2000">Shop Now <TrendingFlatIcon /></Button>
+                        <Button >Shop Now <TrendingFlatIcon /></Button>
                     </Link>
                 </ItemLeft>
                 <ItemRight>

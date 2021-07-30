@@ -83,7 +83,7 @@ export const GalleryContainer = styled.div`
 export const GalleryFrame = styled.div`
     display:flex;
     justify-content:space-between;
-    transform: translate(-40%,10%);
+    transform: translate(-20%,10%);
     
    .disabled{
        display:block!important;
@@ -103,24 +103,24 @@ export const GalleryFrame = styled.div`
 
    .owl-prev{
        position:absolute;
-       top:-29.5%;
+       top:-28.5%;
        left:40%;
    }
 
    .owl-next{
     position:absolute;
-       top:-29.5%;
-       right:-40%;
+       top:-28.5%;
+       right:0%;
    }
 `;
 
 export const GalleryGroup = styled.div`
-
+  
 `;
 
 export const GalleryWrapper = styled.div`
     background-color:#C0E9DE;
-    width:70%;
+    width:80%;
     margin-left:auto;
     padding:100px 100px 10px 100px;
     position:relative;

@@ -40,7 +40,9 @@ export const Input = styled.input`
     width:400px;
     padding:18px 20px;
     border:2px solid #2b8068;
-
+    ::placeholder{
+        font-size:20px;
+    }
     @media (max-width: 768px) {
        width:90%;
        margin-bottom:20px;

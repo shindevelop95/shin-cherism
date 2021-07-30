@@ -32,9 +32,9 @@ export const galleryData = [
 ]
 
 export const landingData = [
-    { "url": "../images/landing/landbanner1.jpg", "id":"1","name":"home",  "animate":"fade-up" },
-    { "url": "../images/landing/landbanner2.jpg", "id":"2","name":"office","animate":"fade-down" },
-    { "url": "../images/landing/landbanner3.jpg", "id":"3","name":"garden","animate":"fade-up" }
+    { "url": "../images/landing/landbanner1.jpg", "id":"1","name":"Home",  "animate":"fade-up" },
+    { "url": "../images/landing/landbanner2.jpg", "id":"2","name":"Office","animate":"fade-down" },
+    { "url": "../images/landing/landbanner3.jpg", "id":"3","name":"Garden","animate":"fade-up" }
 ]
 
 export const landingDataTwo = [];

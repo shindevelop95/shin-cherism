@@ -7,7 +7,7 @@ import CopyrightIcon from '@material-ui/icons/Copyright';
 import { Copyright } from '@material-ui/icons';
 import {IconButton} from '@material-ui/core'
 
-function Footer() {
+function Footer({id}) {
     return (
         <Container>
             <Group>
@@ -25,7 +25,7 @@ function Footer() {
                     
                 </SocialGroup>
             </Group>
-            <Frame>
+            <Frame  id={id}>
                 <Group>
                     <Text>Shop</Text>
                     <Text>Bestsellers</Text>
@@ -37,7 +37,7 @@ function Footer() {
                     <Title>Subscribe to NewsLetter</Title>
                     <Text marginbottom="27px" marginleft="10%" color="black">Stay in the loop and keep up to date with our latest releases, updates and offers</Text>
                     <LetterFrame>
-                        <LetterInput placeholder="Enter your email here"/>
+                        <LetterInput type="search" autocomplete="off" autofill="false" placeholder="Enter your email here"/>
                     </LetterFrame>
                     <LetterFrame>
                         <LetterTitle>SUBSCRIBE</LetterTitle>

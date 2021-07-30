@@ -8,9 +8,10 @@ import ClearIcon from '@material-ui/icons/Clear';
 import MenuIcon from '@material-ui/icons/Menu';
 import {IconButton,Badge} from '@material-ui/core';
 import {Link, useLocation} from 'react-router-dom'
+import {Link as NewLink} from 'react-scroll';
 import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
-function Nav({totalItems}) {
+function Nav({totalItems, to}) {
     const [search, setSearch] = useState(false);
     const [display, setDisplay] = useState(false);
     const [active, setActive] = useState(false);
@@ -51,16 +52,26 @@ function Nav({totalItems}) {
                 <TextGroup>
 
                    { active? (<TextGroupInner className="active">
-                        <Text>Shop</Text>
+                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
+                            <Text>Shop</Text>
+                        </Link>
+                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
                         <Text>Bestseller</Text>
+                        </Link>
                        <Link style={{textDecoration:'none', color:'#eee'}} to="/blog" >
                          <Text>Blog</Text>
                        </Link>
+                        <NewLink to={to} activeClass="active" spy={true} smooth={true}>
                         <Text>Contact</Text>
+                        </NewLink>
                         <Text>About Us</Text>
                     </TextGroupInner>):(<TextGroupInner>
+                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
                         <Text>Shop</Text>
+                        </Link>
+                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
                         <Text>Bestseller</Text>
+                        </Link>
                         <Link style={{textDecoration:'none',color:'#eee'}} to="/blog" >
                          <Text>Blog</Text>
                        </Link>

@@ -16,10 +16,10 @@ function BlogLanding() {
         <Container>
             <Frame>
                 <header data-aos="fade-right">Blog</header>
-                <Inner>
-                    <Text data-aos="fade-right">We write about plant care, workshops, special event. Sign up for our newsletter</Text>
-                    <Input data-aos="fade-left" placeholder="Enter your email"/>
-                    <Button data-aos="fade-left">Sign Up</Button>
+                <Inner data-aos="fade-left">
+                    <Text>We write about plant care, workshops, special event. Sign up for our newsletter</Text>
+                    <Input type="text" placeholder="Enter your email"/>
+                    <Button>Sign Up</Button>
                 </Inner>
                 <Grid container direction="row" spacing={1} className={classes.root}>
                     {galleryData.map((item) => (

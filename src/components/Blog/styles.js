@@ -4,14 +4,14 @@ export const Container = styled.div``;
 
 export const Button = styled.button`
     font-size:30px;
-    color:#91B9AE;
-    background-color:transparent;
+    color:#eee;
+    background-color:#91B9AE;
     padding:10px 60px;
-    border:3px solid #91B9AE;
+    border:none;
     cursor:pointer;
-    transition:1s;
+    transition:.5s;
     &:hover{
-       background-color:#91B9AE;
+       background-color:#2B8068;
        color:#eee;
     }
     @media (max-width: 768px) {
