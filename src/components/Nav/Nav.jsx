@@ -11,7 +11,7 @@ import {Link, useLocation} from 'react-router-dom'
 import {Link as NewLink} from 'react-scroll';
 import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
-function Nav({totalItems, to}) {
+function Nav({totalItems}) {
     const [search, setSearch] = useState(false);
     const [display, setDisplay] = useState(false);
     const [active, setActive] = useState(false);
@@ -61,8 +61,8 @@ function Nav({totalItems, to}) {
                        <Link style={{textDecoration:'none', color:'#eee'}} to="/blog" >
                          <Text>Blog</Text>
                        </Link>
-                        <NewLink to={to} activeClass="active" spy={true} smooth={true}>
-                        <Text>Contact</Text>
+                        <NewLink activeClass="active" to="contact" spy={true} smooth={true}>
+                            <Text>Contact</Text>
                         </NewLink>
                         <Text>About Us</Text>
                     </TextGroupInner>):(<TextGroupInner>

@@ -1,5 +1,6 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
+import {Link as NewLink} from 'react-scroll'
 import {commerce} from './lib/commerce'; 
 import { About,Feature,Footer,Landing,Nav,Products,Slides,Cart, Checkout, Blog } from './components';
 import {
@@ -72,7 +73,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Nav to={to} totalItems={cart.total_items}/>
+      <NewLink>
+        <Nav  totalItems={cart.total_items}/>
+      </NewLink>
           <Link to="/">
                 <img className="logo" src="images/logo.png" alt="logo" />
             </Link>
@@ -107,7 +110,7 @@ function App() {
            
             </Route>
         </Switch>
-        <Footer id={id}/>
+        <Footer name="contact" id="contact"/>
       </Router>
     </div>
   );

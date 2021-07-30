@@ -8,7 +8,7 @@ const CartItem = ({item, handleUpdateCartQty, handleRemoveFromCart}) => {
        <Container>
            <Frame>
                <Group>    
-                    <Image src={item.media.source}/>
+                    <Image src={item.media?.source}/>
                </Group>
                <Group>   
                     <Title width="380px">{item.name}</Title>

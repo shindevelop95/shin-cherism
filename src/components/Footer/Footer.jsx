@@ -25,7 +25,7 @@ function Footer({id}) {
                     
                 </SocialGroup>
             </Group>
-            <Frame  id={id}>
+            <Frame   name="contact" id="contact">
                 <Group>
                     <Text>Shop</Text>
                     <Text>Bestsellers</Text>

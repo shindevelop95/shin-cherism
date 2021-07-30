@@ -2,6 +2,7 @@ import React from 'react';
 import {Grid} from '@material-ui/core'
 import Product from './Product/Product';
 import useStyles from './styles'
+import Recommend from './Recommend/Recommend';
 
 const Products = ({products, onAddToCart}) => {
     const classes = useStyles();
@@ -16,6 +17,7 @@ const Products = ({products, onAddToCart}) => {
                             </Grid>
                         ))}
                     </Grid>
+                    <Recommend/>
             </main>
     )
 }

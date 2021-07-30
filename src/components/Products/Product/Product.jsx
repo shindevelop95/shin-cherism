@@ -11,7 +11,6 @@ const [toggle, setToggle] = useState(true);
 console.log("Show me the product", product);
     const classes = useStyles();
     return (
-        
         <Card className={classes.root}>
             <CardMedia className={classes.media} image={product.media.source} title={product.name}>
             <BottomWrapper>
@@ -30,7 +29,6 @@ console.log("Show me the product", product);
                     {toggle? <FavoriteBorderIcon/> : <FavoriteIcon/>}
                 </IconButton>
              </TopWrapper>
-            
         </Card>
     )
 }
