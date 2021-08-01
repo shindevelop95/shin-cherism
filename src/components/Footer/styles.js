@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 export const Container = styled.div`
     margin-top:250px;
@@ -27,9 +27,38 @@ export const Text = styled.p`
 
 export const SubText = styled.p``;
 
+const fadeUp = keyframes`
+    0%{
+        transform:translateY(2rem);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+`
 export const Group = styled.div`
     margin-left:10%;
     padding:35px 0;
+    .up{
+        position:absolute;
+        background-color:#91B9Ae;
+        top:-13%;
+        left:25%;
+        border-radius:50%;
+        height:100px;
+        width:100px;
+       
+    }
+
+    .arrow{
+        font-size:60px;
+        color:#eee;
+        display:block;
+        margin:auto;
+        padding-top:10px;
+        animation: ${fadeUp} 2s linear infinite;
+        cursor:pointer;
+    }
 `;
 
 export const Wrapper = styled.div`
@@ -46,9 +75,12 @@ export const SocialGroup = styled.div`
 
 `;
 
+
 export const Frame = styled.div`
     background-color:#91B9Ae;
     position:relative;
+
+    
 `;
 
 export const LetterGroup = styled.div`

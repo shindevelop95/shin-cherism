@@ -39,7 +39,7 @@ function Nav({totalItems}) {
             <Wrapper>
                 <Group>
                     <Button>
-                        <FacebookIcon />
+                        <FacebookIcon/>
                         
                     </Button>
                     <Button>
@@ -50,8 +50,8 @@ function Nav({totalItems}) {
                     </Button>
                 </Group>
                 <TextGroup>
-
                    { active? (<TextGroupInner className="active">
+                   <span></span>
                         <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
                             <Text>Shop</Text>
                         </Link>
