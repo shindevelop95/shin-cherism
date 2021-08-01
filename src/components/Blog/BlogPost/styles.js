@@ -37,6 +37,10 @@ export const SubTitle = styled.h3`
 export const Text = styled.p`
     font-weight:${({fontWeight}) => fontWeight? fontWeight:null};
     font-size:20px;
+
+    span{
+        color:#E96B99;
+    }
 `;
 
 

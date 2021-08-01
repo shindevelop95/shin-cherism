@@ -1,6 +1,5 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
-import {Link as NewLink} from 'react-scroll'
 import {commerce} from './lib/commerce'; 
 import { About,Feature,Footer,Landing,Nav,Products,Slides,Cart, Checkout, Blog } from './components';
 import {
@@ -9,11 +8,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-var id , to = "contact";
+
 function App() {
  
-
-
   const [products, setProducts] = useState([]);
   const [cart,setCart] = useState({});
   const [order, setOrder] = useState({});
@@ -73,9 +70,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <NewLink>
         <Nav  totalItems={cart.total_items}/>
-      </NewLink>
           <Link to="/">
                 <img className="logo" src="images/logo.png" alt="logo" />
             </Link>

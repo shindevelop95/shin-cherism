@@ -7,8 +7,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ClearIcon from '@material-ui/icons/Clear';
 import MenuIcon from '@material-ui/icons/Menu';
 import {IconButton,Badge} from '@material-ui/core';
-import {Link, useLocation} from 'react-router-dom'
-import {Link as NewLink} from 'react-scroll';
+import {Link, useLocation, useHistory, useParams} from 'react-router-dom'
 import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
 function Nav({totalItems}) {
@@ -16,7 +15,17 @@ function Nav({totalItems}) {
     const [display, setDisplay] = useState(false);
     const [active, setActive] = useState(false);
     const location = useLocation();
+    const locale = useLocation().pathname;
+    let history = useHistory();
 
+    function handleClick(){
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        });
+    }
+
+    console.log("Show me the pathname",locale);
     useEffect(() => {
         window.addEventListener("scroll",() => {
             if(window.scrollY > 10){
@@ -36,6 +45,15 @@ function Nav({totalItems}) {
                 behavior:'smooth'
             });
         }
+
+        const scrollToAbout = () => {
+            window.scrollTo({
+                top:document.documentElement.scrollHeight/3,
+                behavior:'smooth'
+            });
+        }
+
+        let {slug} = useParams();
     const handleMenu = (e) =>{
         e.preventDefault();
         
@@ -59,6 +77,7 @@ function Nav({totalItems}) {
                    { active? (<TextGroupInner className="active">
                         <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
                             <Text>Shop</Text>
+                            <div>{slug}</div>
                         </Link>
                         <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
                         <Text>Bestseller</Text>
@@ -66,22 +85,26 @@ function Nav({totalItems}) {
                        <Link style={{textDecoration:'none', color:'#eee'}} to="/blog" >
                          <Text>Blog</Text>
                        </Link>
+                       
                         <Link>
                             <Text onClick={scrollToBottom}>Contact</Text>
                         </Link>
-                        <Text>About Us</Text>
+                        
+                        {locale === '/' ? (
+                        <Text onClick={scrollToAbout}>About Us</Text>):null}
                     </TextGroupInner>):(<TextGroupInner>
                         <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
-                        <Text>Shop</Text>
+                        <Text onClick={handleClick}>Shop</Text>
                         </Link>
                         <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
-                        <Text>Bestseller</Text>
+                        <Text onClick={handleClick}>Bestseller</Text>
                         </Link>
                         <Link style={{textDecoration:'none',color:'#eee'}} to="/blog" >
-                         <Text>Blog</Text>
+                         <Text onClick={handleClick}>Blog</Text>
                        </Link>
                         <Text onClick={scrollToBottom}>Contact</Text>
-                        <Text>About Us</Text>
+                        {locale === '/' ? (
+                        <Text onClick={scrollToAbout}>About Us</Text>):null}
                     </TextGroupInner>)}
                 </TextGroup>
                 <Group>
@@ -94,7 +117,7 @@ function Nav({totalItems}) {
                         <Link to="/cart">
                             <Button>
                                 <Badge badgeContent={totalItems} color="secondary">
-                                    <ShoppingCartIcon />
+                                    <ShoppingCartIcon onClick={handleClick}/>
                                 </Badge>
                             </Button>
                         </Link>
