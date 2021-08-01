@@ -30,6 +30,12 @@ function Nav({totalItems}) {
             }
         },[])
     
+        const scrollToBottom = () => {
+            window.scrollTo({
+                top:document.documentElement.scrollHeight,
+                behavior:'smooth'
+            });
+        }
     const handleMenu = (e) =>{
         e.preventDefault();
         
@@ -51,7 +57,6 @@ function Nav({totalItems}) {
                 </Group>
                 <TextGroup>
                    { active? (<TextGroupInner className="active">
-                   <span></span>
                         <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
                             <Text>Shop</Text>
                         </Link>
@@ -61,9 +66,9 @@ function Nav({totalItems}) {
                        <Link style={{textDecoration:'none', color:'#eee'}} to="/blog" >
                          <Text>Blog</Text>
                        </Link>
-                        <NewLink activeClass="active" to="contact" spy={true} smooth={true}>
-                            <Text>Contact</Text>
-                        </NewLink>
+                        <Link>
+                            <Text onClick={scrollToBottom}>Contact</Text>
+                        </Link>
                         <Text>About Us</Text>
                     </TextGroupInner>):(<TextGroupInner>
                         <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
@@ -75,7 +80,7 @@ function Nav({totalItems}) {
                         <Link style={{textDecoration:'none',color:'#eee'}} to="/blog" >
                          <Text>Blog</Text>
                        </Link>
-                        <Text>Contact</Text>
+                        <Text onClick={scrollToBottom}>Contact</Text>
                         <Text>About Us</Text>
                     </TextGroupInner>)}
                 </TextGroup>
