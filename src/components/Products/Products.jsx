@@ -8,7 +8,7 @@ const Products = ({products, onAddToCart}) => {
     const classes = useStyles();
     return(
             <main className={classes.content}>
-                <header>Potted plants delivered to your door</header>
+                <header data-aos="fade-right">Potted plants delivered to your door</header>
                     <div className={classes.toolbar}/>
                     <Grid container justify="center" spacing={4}>
                         {products.map((product) => (
