@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles,IconButton,Button, Card, Avatar, CardActions,CardContent, CardHeader, CardMedia, Typography } from '@material-ui/core'
-import {Container, Title, SubTitle, InstaInput, Text, Wrapper, Group, LeftGroup, RightGroup, Image, InstaFrame, InstaFrameInner, InstaText, InstaButton} from './styles'
+import {Container, Title, SubTitle, InstaInput, Text, Wrapper, Group, LeftGroup, RightGroup, Image} from './styles'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import PublishIcon from '@material-ui/icons/Publish';
@@ -85,7 +85,7 @@ function BlogPost() {
                     </Card>
                 </LeftGroup>
                 <RightGroup>
-                    <Image data-aos="fade-left" src="../images/blog/b2.jpg"/>
+                    <Image data-aos="fade-left" src="../images/blog/b2.jpg" alt="img"/>
                     <Text data-aos="fade-left">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                             The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                             The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.

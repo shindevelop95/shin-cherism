@@ -38,7 +38,7 @@ export const landingData = [
 ]
 
 export const landingDataTwo = [];
-for(var i = 1; i <= 3; i++){
+for(let i = 1; i <= 3; i++){
  landingDataTwo.push({id:i,url:`../images/slides/s${i}.jpg`})
 }
 
@@ -49,6 +49,6 @@ export const landingDataThree = [
 ];
 
 export const landingDataFour = [];
-for(var i = 1; i <= 3; i++){
+for(let i = 1; i <= 3; i++){
  landingDataFour.push({id:i,url:`../images/gallery/gallery${i}.jpg`})
 }

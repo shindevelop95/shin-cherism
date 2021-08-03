@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {Link} from 'react-router-dom';
 export const Container = styled.div`
     position:sticky;
     top:0;
@@ -45,8 +45,18 @@ export const Wrapper = styled.div`
     align-items: center;
     width:90%;
     margin:auto;
+    @media (max-width: 768px) {
+       width:100%;
+  }
+
 `;
 
+export const NavLink = styled(Link)`
+    color:#eee;
+    text-decoration: none;
+    @media(max-width:768px){
+    }
+`;
 export const Input = styled.input`
     width:${({search}) => search? '260px':'0px'};
     opacity:${({search}) => search? '1':'0'};
@@ -87,8 +97,6 @@ export const TextGroup = styled.div`
     }
     
     @media (max-width: 768px) {
-        flex-direction: column;
-        height:auto;
         width:100%;
         cursor:pointer;
 
@@ -131,11 +139,7 @@ export const Text = styled.h3`
     &:hover{
         transform:scale(1.2);
     }
-    @media(max-width:768px){
-        &:first-child{
-            padding-top:140px;
-        }
-    }
+   
     `;
 
 

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { TopWrapper, SubHeader, BottomWrapper, BottomInner } from './styles'
-import { Card, CardMedia ,CardContent,CardActions,Typography,IconButton } from '@material-ui/core'
+import { Card, CardMedia,IconButton } from '@material-ui/core'
 import { AddShoppingCart } from '@material-ui/icons'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';

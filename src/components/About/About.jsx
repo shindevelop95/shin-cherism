@@ -20,16 +20,16 @@ function About() {
                 </WrapperFirst>
                 <WrapperSecond>
                     <LeftGroup>
-                    <Image data-aos="fade-right" height="900px" width="700px" src="../images/landing/land-v.jpg"/>
+                    <Image data-aos="fade-right" height="900px" width="700px" src="../images/landing/land-v.jpg" alt="img"/>
                         <Title data-aos="fade-down">Get your hands dirty</Title>
                         <Text data-aos="fade-down" width="700px">psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
                         <Button>Read More </Button>
                     </LeftGroup>
                     <RightGroup>
-                        <img data-aos="fade-zoom-in" className="abs" src="../images/landing/land-abs.png"/>
+                        <img data-aos="fade-zoom-in" className="abs" src="../images/landing/land-abs.png" alt="img"/>
                         <Title data-aos="fade-down">Plant care workshop</Title>
                         <Text data-aos="fade-down" width="700px">psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
-                        <Image data-aos="fade-left" height="600px" width="900px"  src="../images/landing/land-l.jpg"/>
+                        <Image data-aos="fade-left" height="600px" width="900px"  src="../images/landing/land-l.jpg" alt="img"/>
                     </RightGroup>
                 </WrapperSecond>
             </Container>

@@ -6,9 +6,9 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ClearIcon from '@material-ui/icons/Clear';
 import MenuIcon from '@material-ui/icons/Menu';
-import {IconButton,Badge} from '@material-ui/core';
-import {Link, useLocation, useHistory, useParams} from 'react-router-dom'
-import { Container, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
+import {Badge} from '@material-ui/core';
+import {useLocation} from 'react-router-dom'
+import { Container, NavLink, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
 
 function Nav({totalItems}) {
     const [search, setSearch] = useState(false);
@@ -16,7 +16,7 @@ function Nav({totalItems}) {
     const [active, setActive] = useState(false);
     const location = useLocation();
     const locale = useLocation().pathname;
-    let history = useHistory();
+
 
     function handleClick(){
         window.scrollTo({
@@ -53,11 +53,6 @@ function Nav({totalItems}) {
             });
         }
 
-        let {slug} = useParams();
-    const handleMenu = (e) =>{
-        e.preventDefault();
-        
-    } 
     return (
         <Container display={display}>
             <Wrapper>
@@ -75,37 +70,35 @@ function Nav({totalItems}) {
                 </Group>
                 <TextGroup>
                    { active? (<TextGroupInner className="active">
-                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
+                        <NavLink to="/product">
                             <Text>Shop</Text>
-                            <div>{slug}</div>
-                        </Link>
-                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
+                        </NavLink>
+                        <NavLink to="/product">
                         <Text>Bestseller</Text>
-                        </Link>
-                       <Link style={{textDecoration:'none', color:'#eee'}} to="/blog" >
+                        </NavLink>
+                       <NavLink to="/blog" >
                          <Text>Blog</Text>
-                       </Link>
-                       
-                        <Link>
+                       </NavLink>
+                        <NavLink>
                             <Text onClick={scrollToBottom}>Contact</Text>
-                        </Link>
-                        
+                        </NavLink>
                         {locale === '/' ? (
                         <Text onClick={scrollToAbout}>About Us</Text>):null}
-                    </TextGroupInner>):(<TextGroupInner>
-                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
-                        <Text onClick={handleClick}>Shop</Text>
-                        </Link>
-                        <Link style={{textDecoration:'none', color:'#eee'}} to="/product">
-                        <Text onClick={handleClick}>Bestseller</Text>
-                        </Link>
-                        <Link style={{textDecoration:'none',color:'#eee'}} to="/blog" >
-                         <Text onClick={handleClick}>Blog</Text>
-                       </Link>
-                        <Text onClick={scrollToBottom}>Contact</Text>
-                        {locale === '/' ? (
-                        <Text onClick={scrollToAbout}>About Us</Text>):null}
-                    </TextGroupInner>)}
+                    </TextGroupInner>):
+                        (<TextGroupInner>
+                            <NavLink  to="/product">
+                            <Text onClick={handleClick}>Shop</Text>
+                            </NavLink>
+                            <NavLink  to="/product">
+                            <Text onClick={handleClick}>Bestseller</Text>
+                            </NavLink>
+                            <NavLink to="/blog" >
+                            <Text onClick={handleClick}>Blog</Text>
+                        </NavLink>
+                            <Text onClick={scrollToBottom}>Contact</Text>
+                            {locale === '/' ? (
+                            <Text onClick={scrollToAbout}>About Us</Text>):null}
+                        </TextGroupInner>)}
                 </TextGroup>
                 <Group>
                     <Input placeholder="Search Here" search={search}/>
@@ -114,13 +107,13 @@ function Nav({totalItems}) {
                     </Button>
                    
                     {location.pathname !== '/cart' && (
-                        <Link to="/cart">
+                        <NavLink to="/cart">
                             <Button>
                                 <Badge badgeContent={totalItems} color="secondary">
                                     <ShoppingCartIcon onClick={handleClick}/>
                                 </Badge>
                             </Button>
-                        </Link>
+                        </NavLink>
                     )}
                    
                 </Group>
