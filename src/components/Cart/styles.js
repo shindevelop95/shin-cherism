@@ -2,44 +2,34 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div``;
 
-export const Frame = styled.div`
-   border-top:2px solid #2b8068;
-   margin-top:30px;
-`;
-
 export const Wrapper = styled.div`
-    width:80%;
+    width:90%;
     margin:80px auto;
  
 `;
 
-export const Title = styled.h1`
-    margin-right:150px;
-    text-transform: uppercase;
-    font-size:30px;
-    &:nth-child(2){
-        margin-left:245px;
-    }
-
-    &:nth-child(3){
-        margin-left:110px;
-    }
-
-    &:nth-child(4){
-       
-    }
- `
-
 export const TextFrame = styled.div`
-    width:80%;
     display:flex;
     color:#2b8068;
-    margin-top:30px;
+    margin-top:3rem;
+    justify-content: space-around;
+    text-align:center;
 
     @media(max-width:768px){
         display:none;
     } 
 `;
+
+export const Frame = styled.div`
+   border-top:2px solid #2b8068;
+   margin-top:30px;
+`;
+
+
+export const Title = styled.h1`
+    text-transform: uppercase;
+    font-size:3rem;
+ `
 export const Button = styled.button`
     font-size:20px;
     display:block;
@@ -75,18 +65,18 @@ export const PriceGroup = styled.div`
     display:flex;
     justify-content: space-between;
     align-items:center;
+   
 `;
 
 export const Text = styled.h3`
     text-align: end;
-    font-size:30px;
 `;
 
 
 export const PriceWrapper = styled.div`
     width:20%;
+    font-size:2rem;
     margin-left:auto;
-    font-size:30px;
     border-top:2px solid #2b8068;
     @media(max-width:768px){
         margin-right:auto;
@@ -109,13 +99,13 @@ export const ButtonGroup = styled.div`
 `;
 
 export const CartButton = styled.button`
-    font-size:30px;
+    font-size:2rem;
     text-decoration:none;
     background:none;
     border:2px solid #2b8068;
-    padding:20px;
+    padding:1.8rem;
     border-radius:10px;
-    width:300px;
+    width:23rem;
     color:#2b8068;
     cursor:pointer;
     transition:.5s;
@@ -124,9 +114,4 @@ export const CartButton = styled.button`
         background-color:#2b8068;
         transform:scale(1.1);
     }
-
-    @media(max-width:768px){
-        font-size:20px;
-        width:initial;
-    } 
 `;

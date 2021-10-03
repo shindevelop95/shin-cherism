@@ -9,12 +9,16 @@ export const Container = styled.div`
 
 export const WrapperFirst = styled.div`
     background-color:#eee;
+    align-items: center;
+    justify-content: space-between;
 `;
 
 export const Group = styled.div`
-    width:800px;
+    flex-basis: 50%;
+    flex-wrap:-ms-wrap;
+
     .video-js{
-        margin:auto;
+        
     }
     @media (max-width:768px){
         width:100%;
@@ -43,7 +47,7 @@ export const Frame = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size:40px;
+    font-size:3rem;
     color:#2b8068;
     text-transform:uppercase;
 
@@ -56,10 +60,10 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.p`
-    font-size:25px;
+    font-size:2rem;
     width:${({width}) => width? width:null};
     @media (max-width:768px){
-       font-size:25px;
+       font-size:2.5rem;
        width:100%;
        text-align:center;
        margin:20px auto;

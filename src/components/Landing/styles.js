@@ -16,18 +16,18 @@ export const Wrapper = styled.div`
 
 export const Header = styled(motion.h1)`
     font-family: 'Herr Von Muellerhoff', cursive;
-    font-size:80px;
+    font-size:8rem;
     color:#2b8068;
     z-index:12;
     line-height:0.8;
     position:absolute;
-    width:440px;
+    max-width:44rem;
     text-align: start;
     top:10%;
     left:15%;
     @media (max-width: 768px) {
        position:initial;
-        font-size:50px;
+        font-size:5rem;
         text-align: center;
         width:initial;
   }
@@ -37,17 +37,17 @@ export const Button = styled.button`
     border:none;
     background-color: #906E2b;
     color:#eee;
-    font-size:30px;
-    padding:10px 25px;
+    font-size:3rem;
+    padding:1rem 2.5rem;
     border-radius:10px;
     display:flex;
     align-items: center;
-    margin-top: 250px;
+    margin-top: 25rem;
     cursor:pointer;
     transition:.5s;
     .MuiSvgIcon-root{
-        font-size:50px;
-        margin-left: 20px;
+        font-size:5rem;
+        margin-left: 2rem;
     }
 
     &:hover{
@@ -57,8 +57,8 @@ export const Button = styled.button`
     @media (max-width: 768px) {
         margin:0 auto;
         margin-top:initial;
-        font-size:20px;
-        padding:10px 20px;
+        font-size:2rem;
+        padding:1rem 2rem;
         
   }
 `;
@@ -66,7 +66,7 @@ export const Button = styled.button`
 export const ItemLeft = styled(motion.div)`
     position:relative;
     background-color:#eee;
-    padding:120px;
+    padding:12rem;
     min-width:500px;
     min-height:500px;
 

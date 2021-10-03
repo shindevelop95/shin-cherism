@@ -12,24 +12,15 @@ export const Frame = styled.div`
 
 export const Inner = styled.div`
     display:flex;
+    flex-wrap:wrap;
     align-items:center;
     justify-content: space-between;
-    @media (max-width: 768px) {
-        flex-direction:column;
-    }
-`;
-
-export const Image = styled.img`
-    height:360px;
-    min-width:550px;
-    @media (max-width: 768px) {
-        min-width:initial;
-        width:100%;
-    }
 `;
 
 export const Text = styled.p`
-    font-size:30px;
+    padding-right:1rem;
+    flex:0 0 65%;
+    font-size:2.8rem;
     @media (max-width: 768px) {
         text-align:center;
         font-size:25px;
@@ -37,14 +28,24 @@ export const Text = styled.p`
 `;
 
 export const Input = styled.input`
-    width:400px;
-    padding:18px 20px;
+    flex:1;
+    padding:1.8rem 5rem;
     border:2px solid #2b8068;
     ::placeholder{
-        font-size:20px;
+        font-size:2rem;
     }
     @media (max-width: 768px) {
-       width:90%;
-       margin-bottom:20px;
+       margin:2rem 0;
     }
+`;
+
+export const Grid =  styled.div`
+    margin:2rem 0;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+`;
+
+export const Image = styled.img`
+    height:30rem;
+    width:100%;
 `;

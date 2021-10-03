@@ -3,10 +3,11 @@ import styled from 'styled-components/macro';
 export const Container = styled.div``;
 
 export const Button = styled.button`
-    font-size:30px;
+    flex:1;
+    font-size:2rem;
     color:#eee;
     background-color:#91B9AE;
-    padding:10px 60px;
+    padding:1.6rem .8rem;
     border:none;
     cursor:pointer;
     transition:.5s;

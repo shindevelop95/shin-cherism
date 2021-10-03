@@ -16,23 +16,22 @@ function BlogProfile() {
                 </Group>
             </Inner>
             <Inner>
-                <Group data-aos="fade-right">
-                    <Image  width="95%" src="../images/blog/v1.jpg"/>
+                <Group>
+                    <Image src="../images/blog/v1.jpg"/>
                     <GroupItem >
                         <Button>View Profile</Button>
                         <Title>Choose Plants Based On Light</Title>
-                        <Text width="690px">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</Text>
+                        <Text>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</Text>
                     </GroupItem>
                 </Group>
-                <Group data-aos="fade-left">
-                    <Image width="95%" marginLeft="auto"  src="../images/blog/v2.jpg"/>
-                     <GroupItem marginLeft="40px">
+                <Group>
+                    <Image src="../images/blog/v2.jpg"/>
+                     <GroupItem>
                         <Button>View Profile</Button>
                         <Title>Choose Plants Based On Light</Title>
-                        <Text width="690px">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</Text>
+                        <Text>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</Text>
                     </GroupItem>
                 </Group>
-                
             </Inner>
             </Frame>
         </Container>

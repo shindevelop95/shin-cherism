@@ -58,9 +58,10 @@ export const NavLink = styled(Link)`
     }
 `;
 export const Input = styled.input`
-    width:${({search}) => search? '260px':'0px'};
+    width:${({search}) => search? '20rem':'0px'};
     opacity:${({search}) => search? '1':'0'};
-    height:29px;
+    margin-right:1rem;
+    height:3.2rem;
     padding:5px 15px;
     color:#eee;
     transition:.5s;
@@ -79,9 +80,6 @@ export const Input = styled.input`
 export const Group = styled.div`
     display: flex;
     align-items:center;
-    width:10%;
-    justify-content: space-evenly;
-
     @media (max-width: 768px) {
         display:none;
   }
@@ -115,32 +113,29 @@ export const TextGroupInner = styled.div`
 export const Button = styled.button`
     background-color: transparent;
     color:#eee;
-    font-size:20px;
     border:none;
-    margin-right:10px;
     cursor:pointer;
     transition:.5s;
     &:hover{
         transform:scale(1.2);
+    }  
+    &:not(:last-child){
+        margin-right:1rem;
     }
     .MuiSvgIcon-root{
-        height:40px;
-        width:40px;
+          font-size:4rem;
     }
-
-
 `;
 
 export const Text = styled.h3`
     transition:.5s;
-    font-size:25px;
+    font-size:2.2rem;
     cursor: pointer;
 
     &:hover{
         transform:scale(1.2);
     }
-   
-    `;
+`;
 
 
 export const ButtonToggle = styled.div`

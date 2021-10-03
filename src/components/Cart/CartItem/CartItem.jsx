@@ -3,7 +3,6 @@ import {Container, Frame, InputButton, TextInput, Title, Image, Group, Text} fro
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { IconButton } from '@material-ui/core';
 const CartItem = ({item, handleUpdateCartQty, handleRemoveFromCart}) => {
-    console.log("Show me the item info",item);
     return (
        <Container>
            <Frame>
@@ -11,7 +10,7 @@ const CartItem = ({item, handleUpdateCartQty, handleRemoveFromCart}) => {
                     <Image src={item.media?.source}/>
                </Group>
                <Group>   
-                    <Title width="380px">{item.name}</Title>
+                    <Title>{item.name}</Title>
                     <Text>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum</Text>
                </Group>
                <Group>  
@@ -21,9 +20,7 @@ const CartItem = ({item, handleUpdateCartQty, handleRemoveFromCart}) => {
                </Group>
                 <Group>
                     <Title>{item.line_total.formatted_with_symbol}</Title>
-                </Group>
-                <Group>
-                <IconButton>
+                    <IconButton>
                     <DeleteForeverIcon onClick={() => handleRemoveFromCart(item.id)}/>
                 </IconButton>
                 </Group>

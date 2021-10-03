@@ -1,49 +1,35 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-    margin:200px 0;
+    margin:20rem 0;
 `;
 
 export const Frame = styled.div`
     display:flex;
-    justify-content:space-between;
-
+    flex-wrap:wrap;
     @media (max-width: 768px) {
-        flex-direction:column;
-    }
+       flex-direction:column;
+}
 `;
 
 export const Wrapper = styled.div`
-    height:600px;
-    overflow:hidden;
+    flex:1;
+    max-height:40rem;
     @media (max-width: 768px) {
-        height:400px;
+        height:50rem;
 }
-   
 `;
 
 export const Image = styled.img`
-    width:600px;
-    min-height:600px;
-    @media (max-width: 768px) {
-        min-height:400px;
-}
-    
-
+    width:100%;
+    height:100%;
 `;
 
 export const Title = styled.h1`
-
-    font-size:40px;
-    width:1000px;
+    font-size:4rem;
     color:#2B8068;
+    margin:2rem 0%;
     text-align:center;
-    margin:30px auto;
     text-transform:uppercase;
-
-    @media (max-width: 768px) {
-        font-size:40px;
-        width:initial;
-    }
 `;
 

@@ -58,8 +58,7 @@ function Nav({totalItems}) {
             <Wrapper>
                 <Group>
                     <Button>
-                        <FacebookIcon/>
-                        
+                        <FacebookIcon/>   
                     </Button>
                     <Button>
                         <TwitterIcon />
@@ -102,8 +101,8 @@ function Nav({totalItems}) {
                 </TextGroup>
                 <Group>
                     <Input placeholder="Search Here" search={search}/>
-                    <Button onClick={()=> setSearch(!search)}>
-                        <SearchIcon />
+                    <Button >
+                        <SearchIcon onClick={()=> setSearch(!search)} />
                     </Button>
                    
                     {location.pathname !== '/cart' && (

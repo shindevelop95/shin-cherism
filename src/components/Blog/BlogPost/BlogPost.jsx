@@ -10,6 +10,8 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 const useStyles = makeStyles((theme) => ({
     root:{
         maxWidth:645,
+        marginTop:'5rem',
+        fontSize:'16px'
     },
 
     button:{
@@ -35,17 +37,17 @@ function BlogPost() {
     return (
         <Container>
             <Wrapper>
-                <Title data-aos="fade-right">Looking for some 'Cherisome' inspiration? Here are some blog about our house plants</Title>
-                <SubTitle data-aos="fade-left" textAlign="center">Blog, ShinWang, Inspiration, Plants</SubTitle>
+                <Title>Looking for some 'Cherisome' inspiration? Here are some blog about our house plants</Title>
+                <SubTitle textAlign="center">Blog, ShinWang, Inspiration, Plants</SubTitle>
                <Group>
                 <LeftGroup>
-                <Text data-aos="fade-right">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Text>
+                <Text >There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Text>
                     <hr/>
-                    <SubTitle data-aos="fade-right">Cherismifesta</SubTitle>
-                    <Text data-aos="fade-right"><span>Cherismifesta</span> are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Text>
-                    <Card data-aos="fade-right" className={classes.root}>
+                    <SubTitle>Cherismifesta</SubTitle>
+                    <Text><span>Cherismifesta</span> are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Text>
+                    <Card className={classes.root}>
                     <CardContent className={classes.wrapper}>
-                    <CardHeader avatar={
+                        <CardHeader avatar={
                             <Avatar aria-label="recipe">
                                 R
                             </Avatar>
@@ -54,12 +56,12 @@ function BlogPost() {
                         subheader="17 follower"/>
                         <Button xs={0} size="small" className={classes.button}  variant="contained" color="primary" disableElevation>View Profile</Button>
                     </CardContent>
-                        <CardMedia className={classes.media} image="../images/blog/b1.jpg" title="profile"/>
-                        <CardActions disableSpacing>
-                            <Button  color="primary">
-                                View More on Instagram
-                            </Button>
-                        </CardActions>
+                    <CardMedia className={classes.media} image="../images/blog/b1.jpg" title="profile"/>
+                    <CardActions disableSpacing>
+                        <Button  color="primary">
+                            View More on Instagram
+                        </Button>
+                    </CardActions>
                         <hr/>
                     <CardActions disableSpacing>
                     <IconButton size="small">

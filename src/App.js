@@ -68,6 +68,7 @@ function App() {
   console.log(products);
   console.log("Show me the cart", cart)
   return (
+    <>
     <div className="App">
       <Router>
         <Nav  totalItems={cart.total_items}/>
@@ -102,7 +103,7 @@ function App() {
             <Blog/>
           </Route>
           <Route path="/">
-            <Landing />
+            {/* <Landing /> */}
             <Slides/>
             <About/>
             <Feature/>
@@ -112,6 +113,8 @@ function App() {
         <Footer name="contact" id="contact"/>
       </Router>
     </div>
+    
+    </>
   );
 }
 

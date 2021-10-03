@@ -1,17 +1,10 @@
 import React from 'react'
-import {Container, Inner, Frame, Image,Text, Input} from './styles'
+import {Container, Inner, Frame, Image,Text, Input,Grid} from './styles'
 import {Button} from '../styles'
-import {Grid} from '@material-ui/core'
 import {galleryData} from "../../../fixtures/landingData"
 import {makeStyles} from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
-    root:{
-        margin:'120px 0',
-    }
-}))
 function BlogLanding() {
-    const classes = useStyles();
     return (
         <Container>
             <Frame>
@@ -21,11 +14,11 @@ function BlogLanding() {
                     <Input type="text" placeholder="Enter your email"/>
                     <Button>Sign Up</Button>
                 </Inner>
-                <Grid container direction="row" spacing={1} className={classes.root}>
+                <Grid container direction="row">
                     {galleryData.map((item) => (
-                        <Grid key={item.id} item xs={12} md={6} lg={4} spacing={3}>
+                        <div key={item.id}>
                             <Image data-aos={item.animate} src={item.image}/>
-                        </Grid>
+                        </div>
                     ))}
                 </Grid>
             </Frame>

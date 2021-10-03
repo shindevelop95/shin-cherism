@@ -5,13 +5,13 @@ function Recommend() {
         <Container>
             <Title data-aos="zoom-out">You may like these</Title>
             <Frame>
-                <Wrapper data-aos="fade-down">
+                <Wrapper >
                     <Image src="../../images/Recommend/r1.jpg"/>
                 </Wrapper>
-                <Wrapper data-aos="fade-up">
+                <Wrapper>
                     <Image src="../../images/Recommend/r2.jpg"/>
                 </Wrapper>
-                <Wrapper data-aos="fade-down">
+                <Wrapper >
                     <Image src="../../images/Recommend/r3.jpg"/>
                 </Wrapper>
             </Frame>

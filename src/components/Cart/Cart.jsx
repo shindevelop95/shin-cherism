@@ -17,19 +17,19 @@ const Cart = ({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}
     const FilledCart = () => (
             <Container>
                 <Wrapper>
-                    <header data-aos="fade-right">Shopping Basket</header>
-                    <TextFrame data-aos="fade-left">
+                    <header>Shopping Basket</header>
+                    <TextFrame >
                         <Title>Product</Title>
                         <Title>Description</Title>
                         <Title>Quantity</Title>
                         <Title>Amount</Title>
                     </TextFrame>
                     {cart.line_items.map((item) => (
-                        <Frame data-aos="zoom-in" key={item.id}>
+                        <Frame key={item.id}>
                             <CartItem item={item} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart}/>
                         </Frame>
                     ))}
-                    <PriceWrapper data-aos="fade-left">
+                    <PriceWrapper>
                     <PriceGroup>
                         <Text>Subtotal</Text>
                         <Text>{cart.subtotal.formatted_with_symbol}</Text>

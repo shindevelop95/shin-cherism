@@ -8,13 +8,13 @@ function About() {
             <Container>
                 <WrapperFirst>
                     <Frame>
-                        <Group data-aos="fade-right">
-                            <VideoPlayer className="video" src="../videos/red.mp4" poster={poster} width="690" height="580"/>
+                        <Group>
+                            <VideoPlayer className="video" src="../videos/red.mp4" poster={poster}  height="380"/>
                         </Group>
-                        <Group data-aos="fade-left">
+                        <Group >
                             <Title>About Us</Title>
                             <Text>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</Text>
-                            <Text>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</Text>
+                            <Text> by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</Text>
                         </Group>
                     </Frame>
                 </WrapperFirst>

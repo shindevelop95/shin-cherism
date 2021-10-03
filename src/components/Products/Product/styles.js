@@ -35,8 +35,7 @@ export const TopWrapper = styled.div`
   justify-content: space-between;
   align-items:center;
   .MuiSvgIcon-root{
-    height:40px;
-    width:40px;
+    font-size:3.8rem;
     color:#2B8068;
     cursor:pointer;
     transition:.5s;
@@ -48,12 +47,11 @@ export const TopWrapper = styled.div`
 `;
 
 export const SubHeader = styled.h3`
-  font-size:25px;
+  font-size:2.2rem;
   font-weight:normal;
   color:${({color}) => color? color : '#2B8068'};
-  width:300px;
+  
   @media (max-width: 768px) {
-       font-size:20px;
        
   }  
 `;
@@ -61,6 +59,7 @@ export const SubHeader = styled.h3`
 export const BottomWrapper = styled.div`
   position:absolute;
   background-color: rgba(43,128,104,.65);
+  padding:3rem 0;
   height:20%;
   bottom:0;
   width:100%;
@@ -78,14 +77,14 @@ export const BottomInner = styled.div`
   margin: auto;
   align-items:center;
   .MuiSvgIcon-root{
-    font-size:40px;
+    font-size:3.8rem;
     color:#eee;
     cursor:pointer;
     transition:.5s;
   }
 
   .MuiSvgIcon-root:hover{
-    transform:scale(1.2);
+    transform:scale(1.1);
   }
 
   @media (max-width: 768px) {

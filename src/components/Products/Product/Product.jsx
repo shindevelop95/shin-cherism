@@ -8,7 +8,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import useStyles from './styles'
 const Product = ({product,onAddToCart}) => {
 const [toggle, setToggle] = useState(true);
-console.log("Show me the product", product);
+
     const classes = useStyles();
     return (
         <Card className={classes.root}>

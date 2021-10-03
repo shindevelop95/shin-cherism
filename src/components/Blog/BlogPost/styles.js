@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-
+    margin: 5rem 0;
 `;
 
 export const Wrapper = styled.div`
@@ -10,11 +10,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size:40px;
-    width:1000px;
+    width:80%;
+    margin:0 auto;
+    font-size:3.8rem;
     color:#2B8068;
     text-align:center;
-    margin:0 auto;
 
     @media (max-width: 768px) {
         font-size:40px;
@@ -24,10 +24,11 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h3`
-    font-size:30px;
+    font-size:2.8rem;
     text-transform:uppercase;
     text-align:${({textAlign}) => textAlign? textAlign:'start'};
     color:#2B8068;
+    margin:1rem 0;
     @media (max-width: 768px) {
         font-size:30px;
         text-align:center;
@@ -36,7 +37,7 @@ export const SubTitle = styled.h3`
 
 export const Text = styled.p`
     font-weight:${({fontWeight}) => fontWeight? fontWeight:null};
-    font-size:20px;
+    font-size:2rem;
 
     span{
         color:#E96B99;
@@ -46,6 +47,7 @@ export const Text = styled.p`
 
 
 export const Group = styled.div`
+    margin:5rem 0;
     display:flex;
     @media (max-width: 768px) {
         flex-direction:column;
@@ -53,7 +55,7 @@ export const Group = styled.div`
 `;
 
 export const LeftGroup = styled.div`
-    flex-basis:70%;
+    flex:0 0 70%;
     padding:0 40px;
     hr{
         border:1px solid #eee;
@@ -66,13 +68,13 @@ export const LeftGroup = styled.div`
 `;
 
 export const RightGroup = styled.div`
-    flex-basis:25%;
-    padding:0 40px;
+    flex:0 0 25%;
+    padding:0 4rem;
     hr{
         border:1xp solid black !important;
     }
     .MuiSvgIcon-root{
-        font-size:40px;
+        font-size:4rem;
     }
 `;
 
