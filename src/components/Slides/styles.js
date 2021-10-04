@@ -1,15 +1,12 @@
 import styled from 'styled-components/macro'
 
 export const NewContainer = styled.div`
-    margin-top:30rem;
-    width:90%;
-    margin:auto;
-    @media (max-width:1300px){
-        width:100%;
-     }
+    margin-top:20rem;
 `;
 
 export const Wrapper = styled.div`
+    width:90%;
+    margin:auto;
     display:flex;
     flex-wrap:wrap;
     @media (max-width:768px){
@@ -18,20 +15,19 @@ export const Wrapper = styled.div`
 `;
 
 export const ImageFrame = styled.div`
-    min-height:55rem;
-    min-width:55rem;
+    min-height:50rem;
+    min-width:50rem;
     position: absolute;
     top: 10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
+  
 `;
 export const Image = styled.img`
     height:100%;
     width:100%;
     @media (max-width:768px){
-        width:100%!important;
-        height:400px!important;
      }
 `;
 
@@ -39,10 +35,11 @@ export const Frame = styled.div`
     width:50%;
     margin-left:auto;
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
 
     @media (max-width:768px){
-        grid-template-columns: repeat(1,1fr);
+        margin-left:initial;
+        width:100%;
      }
    
 `;
@@ -106,26 +103,13 @@ export const Item = styled.div`
     &:last-child{
         background-color: #eee;
     }
-    @media (max-width:768px){
-         height:250px;
-         width:250px;
-         .MuiSvgIcon-root{
-            margin-top:30px;
-         }
-     }
     `;
 
 export const SlideShow = styled.div`
     flex-basis:50%;
     display:block;
      @media (max-width:768px){
-         img{
-            height:500px;
-            width:500px;
-         }
-         height:500px;
-         width:500px;
-         margin-bottom:50px;
+        display:none;
      }
 `;
 
@@ -134,7 +118,6 @@ export const ItemImage = styled.img`
     height:100%;
 
     @media(max-width:768px){
-        height:250px;
-        width:250px;
+
     }
 `;

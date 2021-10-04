@@ -2,6 +2,7 @@ import React from "react";
 import {
   Container,
   ItemLeft,
+  ItemLeftInner,
   ItemRight,
   Slider,
   Wrapper,
@@ -21,20 +22,22 @@ function Landing() {
   return (
     <Container>
       <Wrapper>
-        <ItemLeft data-aos="fade-right" data-aos-duration="2000">
+        <ItemLeft>
+          <ItemLeftInner>
           <Header>Potted plants delivered to your door</Header>
           <Link style={{ textDecoration: "none" }} to="/product">
             <Button>
               Shop Now <TrendingFlatIcon />
             </Button>
           </Link>
+          </ItemLeftInner>
         </ItemLeft>
         <ItemRight>
           <Slider>
             <SimpleImageSlider
               style={{ border: "none" }}
-              width={1230}
-              height={720}
+              width={810}
+              height={560}
               images={landingData}
               showBullets={true}
               slideDuration={0.5}
@@ -45,7 +48,7 @@ function Landing() {
       </Wrapper>
       <Banner>
         {landingData.map((item) => (
-          <BannerWrap key={item.id} data-aos={item.animate}>
+          <BannerWrap key={item.id}>
             <Image src={item.url} />
             <ImageBanner>
               <span>{item.name}</span>

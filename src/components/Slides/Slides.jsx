@@ -9,13 +9,13 @@ function Slides() {
     return (
         <NewContainer>
             <Wrapper>
-            <SlideShow data-aos="fade-right" className="slideshow">
-                {landingDataTwo.map((item) => (
-                    <ImageFrame key={item.id}>
-                        <Image src={item.url}/>
-                    </ImageFrame>
-                ))}
-            </SlideShow>
+                <SlideShow className="slideshow">
+                    {landingDataTwo.map((item) => (
+                        <ImageFrame key={item.id}>
+                            <Image src={item.url}/>
+                        </ImageFrame>
+                    ))}
+                </SlideShow>
             <Frame>
                 <Item >
                     <Title>New Arrivals</Title>

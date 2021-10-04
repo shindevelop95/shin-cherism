@@ -103,7 +103,7 @@ function App() {
             <Blog/>
           </Route>
           <Route path="/">
-            {/* <Landing /> */}
+            <Landing />
             <Slides/>
             <About/>
             <Feature/>
