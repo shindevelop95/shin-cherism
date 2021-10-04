@@ -72,13 +72,11 @@ function App() {
     <div className="App">
       <Router>
         <Nav  totalItems={cart.total_items}/>
-          
             <div className="logoWrap">
             <Link to="/">
               <img className="logo" src="images/logo.png" alt="logo" />
             </Link>
             </div>  
-           
         <Switch>
           <Route path="/product">
             <Products products={products} onAddToCart={handleAddToCart}/>

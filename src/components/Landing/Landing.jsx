@@ -36,7 +36,7 @@ function Landing() {
           <Slider>
             <SimpleImageSlider
               style={{ border: "none" }}
-              width={810}
+              width={800}
               height={560}
               images={landingData}
               showBullets={true}

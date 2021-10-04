@@ -17,8 +17,15 @@ export const SubTitle = styled.h3`
 
 export const Text = styled.p`
     margin:.8rem 0;
-    color:${({color}) => color? color : `#eee`};
+    color:#eee;
+    position:relative;
     font-size:1.8rem;
+    @media(max-width:768px){
+        display:inline-block;
+        margin:0 5rem;
+        padding:3rem 0;
+        z-index:99;
+    }
 
 `;
 
@@ -60,8 +67,8 @@ export const FrameGroup = styled.div`
         top:-20%;
         left:25%;
         border-radius:50%;
-        height:100px;
-        width:100px;
+        height:10rem;
+        width:10rem;
        
     }
 
@@ -74,6 +81,31 @@ export const FrameGroup = styled.div`
         animation: ${fadeUp} 2s linear infinite;
         cursor:pointer;
     }
+
+    @media (max-width: 768px) {
+        height:10rem;
+        width:initial;
+        .up{
+            position:absolute;
+            background-color:#91B9Ae;
+            top:-20%;
+            left:50%;
+            transform:translateX(-50%);
+            border-radius:50%;
+            height:10rem;
+            width:10rem;
+        }
+
+        .arrow{
+            font-size:5rem;
+            color:#eee;
+            display:block;
+            margin:auto;
+            padding-top:.1rem;
+            animation: ${fadeUp} 2s linear infinite;
+            cursor:pointer;
+        }
+  }
 `;
 export const SocialGroup = styled.div`
     display:flex;
@@ -84,9 +116,6 @@ export const SocialGroup = styled.div`
 
 `;
 
-
-
-
 export const LetterGroup = styled.div`
     position:absolute;
     right:0;
@@ -94,9 +123,16 @@ export const LetterGroup = styled.div`
     width:50%;
     background-color: rgba(144,110,43,.4);
     height:40rem;
-
+    
     @media (max-width: 768px) {
-        display:none;
+       position:initial;
+       width:initial;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+  }
+  @media (max-width: 645px) {
+       display:none;
   }
 
 `;
@@ -105,6 +141,7 @@ export const LetterInner = styled.div`
     width:80%;
     margin:auto;
     position:relative;
+      z-index:150;
 `;
 
 export const LetterFrame = styled.div`

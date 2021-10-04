@@ -119,7 +119,6 @@ export const RightGroup = styled.div`
 
 export const WrapperSecond = styled.div`
     display:flex;
-    flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
     width:90%;

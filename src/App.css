@@ -1,6 +1,7 @@
 .logo {
-  height: 150px;
-  margin: 50px 0;
+  height: 12rem;
+  object-fit: contain;
+  margin: 4rem 0;
 }
 
 .logoWrap {

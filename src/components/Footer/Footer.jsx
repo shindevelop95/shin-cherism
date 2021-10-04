@@ -49,7 +49,7 @@ function Footer() {
                           <Text>Stay in the loop and keep up to date with our latest releases, updates and offers</Text>
                       <LetterFrame>
                           <LetterInput type="search" autocomplete="off" autofill="false" placeholder="Enter your email here"/>
-                          <LetterTitle>SUBSCRIBE</LetterTitle>
+                          <LetterTitle>SUBSCsRIBE</LetterTitle>
                       </LetterFrame>
                       <CopyGroup>
                           <CopyrightIcon/> <span>All Rights Reserved, Developed by Shin W, 2021</span>
@@ -57,8 +57,6 @@ function Footer() {
                      </LetterInner>
                 </LetterGroup>
                 </FrameGroup>
-              
-                
             </Frame>
             
         </Container>

@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     display:flex;
     width:90%;
     margin:5rem auto;
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       flex-direction:column-reverse;
 }
 `;
@@ -78,8 +78,8 @@ export const ItemRight = styled(motion.div)`
     flex:0 0 70%;
     transform: translate(0%, -5%);
     border:none;
-    @media (max-width: 768px) {
-     display:none;
+    @media (max-width:768px) {
+      display:none;
   }
 `;
 
