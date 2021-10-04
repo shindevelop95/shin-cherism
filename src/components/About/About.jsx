@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Frame, Group, Title, Text, LeftGroup, RightGroup, WrapperSecond,Image, Button, WrapperFirst} from './styles';
+import {Container, Frame, Group, TextGroup, Title, Text, LeftGroup, RightGroup, WrapperSecond,Image, Button, WrapperFirst} from './styles';
 import VideoPlayer from "react-video-js-player";
 
 function About() {
@@ -20,16 +20,20 @@ function About() {
                 </WrapperFirst>
                 <WrapperSecond>
                     <LeftGroup>
-                    <Image data-aos="fade-right" height="900px" width="700px" src="../images/landing/land-v.jpg" alt="img"/>
-                        <Title data-aos="fade-down">Get your hands dirty</Title>
-                        <Text data-aos="fade-down" width="700px">psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
+                    <Image src="../images/landing/land-v.jpg" alt="img"/>
+                        <TextGroup>
+                            <Title >Get your hands dirty</Title>
+                            <Text >psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
+                        </TextGroup>
                         <Button>Read More </Button>
                     </LeftGroup>
                     <RightGroup>
-                        <img data-aos="fade-zoom-in" className="abs" src="../images/landing/land-abs.png" alt="img"/>
-                        <Title data-aos="fade-down">Plant care workshop</Title>
-                        <Text data-aos="fade-down" width="700px">psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
-                        <Image data-aos="fade-left" height="600px" width="900px"  src="../images/landing/land-l.jpg" alt="img"/>
+                        <img  className="abs" src="../images/landing/land-abs.png" alt="img"/>
+                        <TextGroup>
+                            <Title>Plant care workshop</Title>
+                            <Text>psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
+                        </TextGroup>
+                        <Image src="../images/landing/land-l.jpg" alt="img"/>
                     </RightGroup>
                 </WrapperSecond>
             </Container>

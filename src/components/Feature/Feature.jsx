@@ -15,7 +15,7 @@ function Feature() {
                 <Frame>
                     {landingDataThree.map((item) => (
                         <Group key={item.id}>
-                            <Image src={item.url} bottom={item.bottom} data-aos={item.animate} data-aos-duration={item.duration}/>
+                            <Image src={item.url} bottom={item.bottom}/>
                         </Group>
                     ))}
                 </Frame>

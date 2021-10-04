@@ -5,7 +5,6 @@ export const Container = styled.div``;
 export const Wrapper = styled.div`
     width:90%;
     margin:80px auto;
- 
 `;
 
 export const TextFrame = styled.div`

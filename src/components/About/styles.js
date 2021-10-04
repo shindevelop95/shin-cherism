@@ -14,18 +14,23 @@ export const WrapperFirst = styled.div`
 `;
 
 export const Group = styled.div`
-    flex-basis: 50%;
+    flex:0 0 50%;
     flex-wrap:-ms-wrap;
 
     .video-js{
-        
+        width:45rem;
     }
     @media (max-width:768px){
+
+        &:nth-child(2){
+            padding:2rem;
+        }
+        &:not(:last-child){
+            margin-bottom:3rem;
+        }
         width:100%;
         .video-js{
-            margin-left:initial;
             margin:auto;
-            height:300px;
         }
     }
 `;
@@ -52,7 +57,6 @@ export const Title = styled.h1`
     text-transform:uppercase;
 
     @media (max-width:768px){
-       font-size:30px;
        text-align:center;
        margin:auto;
       
@@ -61,7 +65,7 @@ export const Title = styled.h1`
 
 export const Text = styled.p`
     font-size:2rem;
-    width:${({width}) => width? width:null};
+    margin:3rem 0;
     @media (max-width:768px){
        font-size:2.5rem;
        width:100%;
@@ -71,16 +75,11 @@ export const Text = styled.p`
 `;
 
 export const Image = styled.img`
-    height:${height => height ? height: null};
-    width:${width => width ? width: null};
-    @media (max-width:768px){
-      height:500px;
-      width:100%;
-      margin-bottom:30px;
-    }
+    width:100%;
 `;
 
 export const LeftGroup = styled.div`
+    flex:0 0 45%;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -90,18 +89,22 @@ export const LeftGroup = styled.div`
     }
 `;
 
+export const TextGroup = styled.div`
+    margin:5rem 0;
+`;
+
+
 export const RightGroup = styled.div`
+    flex:0 0 45%;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     position:relative;
+    transform:translateY(-20%);
 
     .abs{
-        position:absolute;
-        top:-1000px;
-        height:1000px;
-        width:900px;
+        min-height:80rem;
     }
 
     @media (max-width:768px){
@@ -116,23 +119,17 @@ export const RightGroup = styled.div`
 
 export const WrapperSecond = styled.div`
     display:flex;
+    flex-wrap:wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     width:90%;
-    padding:80px 0;
     margin:auto;
-
-    @media (max-width:768px){
-      width:initial;
-      margin:initial;
-      flex-direction:column;
-    }
 `;
 
 export const Button = styled.button`
     background-color:transparent;
     border:none;
-    font-size:25px;
+    font-size:2rem;
     color:#2b8068;
 
     @media (max-width:768px){
