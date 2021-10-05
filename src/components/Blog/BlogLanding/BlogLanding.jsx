@@ -2,7 +2,6 @@ import React from 'react'
 import {Container, Inner, Frame, Image,Text, Input,Grid} from './styles'
 import {Button} from '../styles'
 import {galleryData} from "../../../fixtures/landingData"
-import {makeStyles} from '@material-ui/core/styles';
 
 function BlogLanding() {
     return (

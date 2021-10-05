@@ -20,7 +20,7 @@ export const Inner = styled.div`
 export const Text = styled.p`
     padding-right:1rem;
     flex:0 0 65%;
-    font-size:2.8rem;
+    font-size:2.4rem;
     @media (max-width: 768px) {
         text-align:center;
         font-size:25px;
@@ -31,6 +31,7 @@ export const Input = styled.input`
     flex:1;
     padding:1.8rem 5rem;
     border:2px solid #2b8068;
+    border-radius:10px;
     ::placeholder{
         font-size:2rem;
     }

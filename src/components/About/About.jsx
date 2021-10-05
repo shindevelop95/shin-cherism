@@ -25,7 +25,7 @@ function About() {
                             <Title >Get your hands dirty</Title>
                             <Text >psum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</Text>
                         </TextGroup>
-                        <Button>Read More </Button>
+                        <Button>Read More &rarr;</Button>
                     </LeftGroup>
                     <RightGroup>
                         <img  className="abs" src="../images/landing/land-abs.png" alt="img"/>

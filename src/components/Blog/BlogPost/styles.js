@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
     width:80%;
     margin:0 auto;
-    font-size:3.8rem;
+    font-size:3rem;
     color:#2B8068;
     text-align:center;
 
@@ -24,7 +24,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h3`
-    font-size:2.8rem;
+    font-size:2.4rem;
     text-transform:uppercase;
     text-align:${({textAlign}) => textAlign? textAlign:'start'};
     color:#2B8068;
@@ -37,7 +37,8 @@ export const SubTitle = styled.h3`
 
 export const Text = styled.p`
     font-weight:${({fontWeight}) => fontWeight? fontWeight:null};
-    font-size:2rem;
+    font-size:1.8rem;
+    color:rgba(0,0,0,.85);
 
     span{
         color:#E96B99;
@@ -57,6 +58,14 @@ export const Group = styled.div`
 export const LeftGroup = styled.div`
     flex:0 0 70%;
     padding:0 40px;
+
+    .MuiCardHeader-title{
+        font-size:1.8rem;
+    }
+
+    .MuiCardHeader-subheader{
+        font-size:1.4rem;
+    }
     hr{
         border:1px solid #eee;
     }

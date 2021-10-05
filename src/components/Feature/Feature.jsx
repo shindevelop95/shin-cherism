@@ -23,7 +23,7 @@ function Feature() {
             </Container>
             <GalleryContainer>
                 <GalleryWrapper>
-                    <Title align="center">Our plants in the wild</Title>
+                    <Title align="center">Our Plants In The Wild</Title>
                     <GalleryFrame>
                         <OwlCarousel items={3}  
                             className="owl-theme"  

@@ -44,43 +44,31 @@ export const Frame = styled.div`
    
 `;
 
+export const TextGroup = styled.div`
+    width:80%;
+    margin:auto;
+`;
+
 export const Title = styled.h3`
-    font-size: 3.5rem;
-    text-align:start;
-    padding-left:5.6rem;
+    font-size: 3rem;
     display:block;
     color:#2b8068;
-    text-transform:uppercase;
-    margin-top:12rem;
-
-    @media (max-width:768px){
-         font-size:30px;
-         margin-top:80px;
-         padding-left: initial;
-         text-align:center;
-     }
-   
+    margin-bottom:1rem;
+    text-transform:uppercase;   
 `;
 
 export const Text = styled.p`
-    font-size:2rem;
-    width:30rem;
-    padding-left:6rem;
-    text-align:start;
+    font-size:1.8rem;
     font-weight:800;
-
-     @media (max-width:768px){
-         padding-left: initial;
-         font-size:20px;
-         text-align:center;
-         width:initial;
-
-     }
 `;
 
 
 export const Item = styled.div`
     height:33rem;
+    &:nth-child(1){
+        display:flex;
+        align-items:center;
+    }
     .MuiSvgIcon-root{
         height:18rem;
         width:18rem;

@@ -2,12 +2,13 @@ import styled, {keyframes} from 'styled-components'
 
 export const Container = styled.div`
     margin-top:25rem;
+    font-family: 'Roboto', sans-serif;
 `;
 
 export const Title = styled.h1`
     font-size:2rem;
     text-transform:uppercase;
-    margin-top:5rem;
+    margin:3rem 0;
 `;
 
 export const SubTitle = styled.h3`
@@ -16,20 +17,27 @@ export const SubTitle = styled.h3`
 `;
 
 export const Text = styled.p`
-    margin:.8rem 0;
+    display: block;
     color:#eee;
-    position:relative;
     font-size:1.8rem;
     @media(max-width:768px){
         display:inline-block;
-        margin:0 5rem;
         padding:3rem 0;
         z-index:99;
     }
-
 `;
+export const TextGroup = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-self:center;
+    margin-top:2rem;
 
-export const SubText = styled.p``;
+    @media(max-width:768px){
+        margin-top:initial;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+`;
 
 const fadeUp = keyframes`
     0%{
@@ -41,11 +49,6 @@ const fadeUp = keyframes`
     }
 `
 export const Group = styled.div`
-    width:90%;
-    margin:auto;
-`;
-
-export const Wrapper = styled.div`
     width:90%;
     margin:auto;
 `;
@@ -69,7 +72,6 @@ export const FrameGroup = styled.div`
         border-radius:50%;
         height:10rem;
         width:10rem;
-       
     }
 
     .arrow{
@@ -113,7 +115,6 @@ export const SocialGroup = styled.div`
         color:#2B8068;
         font-size:4.5rem;
     }
-
 `;
 
 export const LetterGroup = styled.div`
@@ -130,18 +131,14 @@ export const LetterGroup = styled.div`
        display:flex;
        justify-content: center;
        align-items: center;
-  }
-  @media (max-width: 645px) {
-       display:none;
-  }
-
+    }
 `;
 
 export const LetterInner = styled.div`
     width:80%;
     margin:auto;
     position:relative;
-      z-index:150;
+    z-index:150;
 `;
 
 export const LetterFrame = styled.div`
@@ -149,18 +146,6 @@ export const LetterFrame = styled.div`
     text-align: center;
     padding:2rem 0;
     margin:1.5rem 0;
-`;
-
-export const LetterTitle = styled.h1`
-   font-size:2rem;
-   padding:2rem 0;
-   text-align: center;
-   cursor:pointer;
-   transition:.5s;
-   &:hover{
-       color:#eee;
-       transform:scale(1.2);
-   }
 `;
 
 export const LetterInput = styled.input`
@@ -174,6 +159,19 @@ export const LetterInput = styled.input`
     &:focus{
         outline:none;
     }
+`;
+
+export const LetterTitle = styled.h1`
+   font-size:2rem;
+   padding-top:2rem;
+   margin-top:1rem;
+   text-align: center;
+   cursor:pointer;
+   transition: all .5s;
+   &:hover{
+       color:#eee;
+       transform:scale(1.05);
+   }
 `;
 
 export const CopyGroup = styled.div`

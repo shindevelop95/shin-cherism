@@ -54,23 +54,20 @@ export const Frame = styled.div`
 export const Title = styled.h1`
     font-size:3rem;
     color:#2b8068;
-    text-transform:uppercase;
-
     @media (max-width:768px){
        text-align:center;
        margin:auto;
-      
     }
 `;
 
 export const Text = styled.p`
-    font-size:2rem;
+    font-size:1.8rem;
     margin:3rem 0;
+    color:rgba(0,0,0,.85);
     @media (max-width:768px){
-       font-size:2.5rem;
        width:100%;
        text-align:center;
-       margin:20px auto;
+       margin:2rem auto;
     }
 `;
 
@@ -84,13 +81,10 @@ export const LeftGroup = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    @media (max-width:768px){
-       
-    }
 `;
 
 export const TextGroup = styled.div`
-    margin:5rem 0;
+    margin:3rem 0;
 `;
 
 
@@ -130,7 +124,12 @@ export const Button = styled.button`
     border:none;
     font-size:2rem;
     color:#2b8068;
+    cursor:pointer;
+    transition:all .5s;
 
+    &:hover{
+        transform:scale(1.05);
+    }
     @media (max-width:768px){
       display:block;
       margin:auto;

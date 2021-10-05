@@ -1,17 +1,14 @@
 import React from 'react'
 import { makeStyles,IconButton,Button, Card, Avatar, CardActions,CardContent, CardHeader, CardMedia, Typography } from '@material-ui/core'
 import {Container, Title, SubTitle, InstaInput, Text, Wrapper, Group, LeftGroup, RightGroup, Image} from './styles'
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import PublishIcon from '@material-ui/icons/Publish';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import {Publish,Facebook,Instagram,FavoriteBorder,ChatBubbleOutline} from '@material-ui/icons';
+
 
 const useStyles = makeStyles((theme) => ({
     root:{
         maxWidth:645,
         marginTop:'5rem',
-        fontSize:'16px'
+        fontSize:'18px'
     },
 
     button:{
@@ -29,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     },
     text:{
         color:'#5a94f9',
+    },
+    content:{
+        fontSize:'20px',
+        
     }
 }))
 function BlogPost() {
@@ -47,7 +48,7 @@ function BlogPost() {
                     <Text><span>Cherismifesta</span> are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Text>
                     <Card className={classes.root}>
                     <CardContent className={classes.wrapper}>
-                        <CardHeader avatar={
+                        <CardHeader className={classes.content} avatar={
                             <Avatar aria-label="recipe">
                                 R
                             </Avatar>
@@ -65,13 +66,13 @@ function BlogPost() {
                         <hr/>
                     <CardActions disableSpacing>
                     <IconButton size="small">
-                        <FavoriteBorderIcon/>
+                        <FavoriteBorder/>
                     </IconButton>
                     <IconButton size="small">
-                        <ChatBubbleOutlineIcon/>
+                        <ChatBubbleOutline/>
                     </IconButton>
                     <IconButton size="small">
-                        <PublishIcon/>
+                        <Publish/>
                     </IconButton>
                     </CardActions>
                     <CardContent>
@@ -94,8 +95,8 @@ function BlogPost() {
                     </Text>
                     <hr/>
                     <Text data-aos="fade-left" fontWeight="bold">Follow us</Text>
-                    <FacebookIcon data-aos="fade-left" color="primary"/>
-                    <InstagramIcon data-aos="fade-left" color="secondary"/>
+                    <Facebook data-aos="fade-left" color="primary"/>
+                    <Instagram data-aos="fade-left" color="secondary"/>
                     <hr/>
                 </RightGroup>
                </Group>

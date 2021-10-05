@@ -11,9 +11,14 @@ export const Frame = styled.div`
 
 export const GroupItem = styled.div`
     margin-top:3rem;
-    padding-left:2rem;
+  
 `;
 
+export const InnerGroup = styled.div`
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+`;
 export const Inner = styled.div`
     display:flex;
     flex-wrap:wrap;
@@ -22,8 +27,24 @@ export const Inner = styled.div`
     margin:3rem 0;
 `;
 
+export const InnerTitle = styled.h1`
+      font-size:3rem;
+      text-transform:uppercase;
+      margin:4rem 0;
+      color:#2b8068;
+      display:block;
+      flex:0 0 50%;
+      padding:2rem;
+`;
+
+export const InnerText = styled.p`
+    font-size:1.8rem;
+    padding:2rem;
+    color:rgba(0,0,0,.85)
+`;
+
 export const Group = styled.div`
-    flex:0 0 50%
+    flex:0 0 48%
 `;
 
 export const Image = styled.img`
@@ -41,6 +62,7 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.p`
-    font-size:2rem;
+    font-size:1.8rem;
+    color:rgba(0,0,0,.85)
 `;
 

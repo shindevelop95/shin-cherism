@@ -26,8 +26,9 @@ export const Frame = styled.div`
 
 
 export const Title = styled.h1`
-    text-transform: uppercase;
+    flex:1;
     font-size:3rem;
+    padding:2rem;
  `
 export const Button = styled.button`
     font-size:20px;

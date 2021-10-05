@@ -131,6 +131,7 @@ export const Text = styled.h3`
     transition:.5s;
     font-size:2.2rem;
     cursor: pointer;
+    font-family: 'Oswald', sans-serif;
 
     &:hover{
         transform:scale(1.2);

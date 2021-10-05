@@ -50,7 +50,7 @@ export const WrapperFirst = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size:3.8rem;
+    font-size:3rem;
     color:#2b8068;
     text-align:${({align}) => align ? align : null};
     @media (max-width: 768px) {
@@ -59,7 +59,9 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.p`
-    font-size:2rem;
+    font-size:1.8rem;
+    margin:3rem 0;
+    color:rgba(0,0,0,.85);
     @media (max-width: 768px) {
        text-align:center;
   } 
@@ -84,9 +86,9 @@ export const GalleryFrame = styled.div`
 
    .owl-prev,
    .owl-next{
-      top:-23.5%;
+      top:-20.5%;
       position:absolute;
-      font-size: 10rem!important;
+      font-size: 7rem!important;
       color:#2b8068!important;
       transition:.5s;
       :hover{
@@ -113,10 +115,10 @@ export const GalleryWrapper = styled.div`
     background-color:#C0E9DE;
     width:80%;
     margin-left:auto;
-    padding:100px 100px 10px 100px;
+    padding:100px 100px 0 100px;
     position:relative;
 `;
 export const GalleryImage = styled.img`
-    height:70rem;
+    height:65rem;
     width:50rem;
 `;

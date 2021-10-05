@@ -2,7 +2,7 @@ import React from 'react'
 import '../../utils/styles.css'
 import '../../utils/main'
 import {landingDataTwo} from '../../fixtures/landingData'
-import {NewContainer,Wrapper,Image, ImageFrame,ItemImage,Frame, Title, Text, Item, SlideShow} from './styles'
+import {NewContainer,Wrapper,Image, ImageFrame,ItemImage,Frame, Title, Text, Item, TextGroup,SlideShow} from './styles'
 import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
 
 function Slides() {
@@ -18,8 +18,10 @@ function Slides() {
                 </SlideShow>
             <Frame>
                 <Item >
-                    <Title>New Arrivals</Title>
-                    <Text>A one stop shop for all indoor gardening essentials</Text>
+                    <TextGroup>
+                        <Title>New Arrivals</Title>
+                        <Text>A one stop shop for all indoor gardening essentials</Text>
+                    </TextGroup>
                 </Item>
                 <Item>
                     <ItemImage src="../images/slides/s5.jpg"/>

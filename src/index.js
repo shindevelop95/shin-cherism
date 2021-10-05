@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     html, body{
       
         font-size:62.5%;
+        font-family: 'Roboto', sans-serif;
 
         @media only screen and (max-width: 1300px) {
             font-size: 56.25%;
@@ -29,18 +30,18 @@ const GlobalStyle = createGlobalStyle`
             font-size: 37.5%;
         }
     }
-  header{
-    font-family: 'Herr Von Muellerhoff', cursive;
-    font-size:80px;
-    font-weight:bold;
-    color:#2b8068;
-    line-height:0.8;
-    width:440px;
-    text-align: start;
-    @media (max-width: 768px) {
-        text-align: center;
-        width:initial;   
-  }
+    header{
+      font-family: 'Herr Von Muellerhoff', cursive;
+      font-size:6.5rem;
+      font-weight:bold;
+      color:#2b8068;
+      line-height:0.8;
+      max-width:44rem;
+      text-align: start;
+      @media (max-width: 768px) {
+          max-width:initial;
+          text-align: center;
+    }
   }
 `
 
