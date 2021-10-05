@@ -3,12 +3,12 @@ import styled from 'styled-components/macro';
 export const Container = styled.div``;
 
 export const Button = styled.button`
-    flex:1;
     font-size:2rem;
     color:#eee;
     background-color:#91B9AE;
-    padding:1.6rem .8rem;
+    padding:1.6rem 3rem;
     border:none;
+    border-radius:10px;
     cursor:pointer;
     transition:.5s;
     &:hover{

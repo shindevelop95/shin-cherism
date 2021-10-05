@@ -15,15 +15,20 @@ export const Container = styled.div`
             display:block;
         }
         
-        .active{   
-            display:block;
-            color:white;
-            font-size:30px;
-            text-align:center;
+        .active{  
+            display:flex;
+            justify-content: center;
+            align-items: center;
             background-color:#91b9ae;
             z-index:30;
             height:100vh;
         }
+
+        .active >.nav-inner{
+            text-align:center;
+            color:white;
+        }
+
         .MuiSvgIcon-root{
             display:inline-block;
             position:absolute;

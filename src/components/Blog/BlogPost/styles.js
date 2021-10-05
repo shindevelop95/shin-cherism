@@ -25,7 +25,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h3`
     font-size:2.4rem;
-    text-transform:uppercase;
+    text-transform:${({transform}) => transform? transform:'uppercase'};
     text-align:${({textAlign}) => textAlign? textAlign:'start'};
     color:#2B8068;
     margin:1rem 0;
@@ -39,7 +39,9 @@ export const Text = styled.p`
     font-weight:${({fontWeight}) => fontWeight? fontWeight:null};
     font-size:1.8rem;
     color:rgba(0,0,0,.85);
-
+    &:nth-child(1){
+        margin-top:5rem;
+    }
     span{
         color:#E96B99;
     }
@@ -90,6 +92,7 @@ export const RightGroup = styled.div`
 export const Image = styled.img`
     width:100%;
     object-fit:contain;
+    margin-bottom: 2rem;
 `;
 
 export const InstaInput = styled.input`

@@ -8,7 +8,7 @@ function BlogLanding() {
         <Container>
             <Frame>
                 <header data-aos="fade-right">Blog</header>
-                <Inner data-aos="fade-left">
+                <Inner >
                     <Text>We write about plant care, workshops, special event. Sign up for our newsletter</Text>
                     <Input type="text" placeholder="Enter your email"/>
                     <Button>Sign Up</Button>

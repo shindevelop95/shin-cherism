@@ -65,8 +65,6 @@ function App() {
     fetchCart();
   }, []);
 
-  console.log(products);
-  console.log("Show me the cart", cart)
   return (
     <>
     <div className="App">

@@ -15,11 +15,12 @@ export const Inner = styled.div`
     flex-wrap:wrap;
     align-items:center;
     justify-content: space-between;
+    margin:3rem 0 12rem 0;
 `;
 
 export const Text = styled.p`
     padding-right:1rem;
-    flex:0 0 65%;
+    flex:0 0 50%;
     font-size:2.4rem;
     @media (max-width: 768px) {
         text-align:center;
@@ -32,6 +33,7 @@ export const Input = styled.input`
     padding:1.8rem 5rem;
     border:2px solid #2b8068;
     border-radius:10px;
+    margin-right:1rem;
     ::placeholder{
         font-size:2rem;
     }
@@ -41,7 +43,7 @@ export const Input = styled.input`
 `;
 
 export const Grid =  styled.div`
-    margin:2rem 0;
+    margin:5rem 0;
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 `;

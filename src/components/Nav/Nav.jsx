@@ -1,11 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import SearchIcon from '@material-ui/icons/Search';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import ClearIcon from '@material-ui/icons/Clear';
-import MenuIcon from '@material-ui/icons/Menu';
+import {Twitter,Instagram,Facebook,Search,ShoppingCart,Clear,Menu} from '@material-ui/icons/';
 import {Badge} from '@material-ui/core';
 import {useLocation} from 'react-router-dom'
 import { Container, NavLink, Wrapper, TextGroup, TextGroupInner, Group, Button, Text, Input, ButtonToggle } from './styles'
@@ -25,7 +19,6 @@ function Nav({totalItems}) {
         });
     }
 
-    console.log("Show me the pathname",locale);
     useEffect(() => {
         window.addEventListener("scroll",() => {
             if(window.scrollY > 10){
@@ -58,31 +51,33 @@ function Nav({totalItems}) {
             <Wrapper>
                 <Group>
                     <Button>
-                        <FacebookIcon/>   
+                        <Facebook/>   
                     </Button>
                     <Button>
-                        <TwitterIcon />
+                        <Twitter/>
                     </Button>
                     <Button>
-                        <InstagramIcon />
+                        <Instagram/>
                     </Button>
                 </Group>
                 <TextGroup>
                    { active? (<TextGroupInner className="active">
-                        <NavLink to="/product">
-                            <Text>Shop</Text>
-                        </NavLink>
-                        <NavLink to="/product">
-                        <Text>Bestseller</Text>
-                        </NavLink>
-                       <NavLink to="/blog" >
-                         <Text>Blog</Text>
-                       </NavLink>
-                        <NavLink>
-                            <Text onClick={scrollToBottom}>Contact</Text>
-                        </NavLink>
-                        {locale === '/' ? (
-                        <Text onClick={scrollToAbout}>About Us</Text>):null}
+                        <div className="nav-inner">
+                            <NavLink to="/product">
+                                <Text>Shop</Text>
+                            </NavLink>
+                            <NavLink to="/product">
+                                <Text>Bestseller</Text>
+                            </NavLink>
+                            <NavLink to="/blog" >
+                                <Text>Blog</Text>
+                            </NavLink>
+                            <NavLink>
+                                <Text onClick={scrollToBottom}>Contact</Text>
+                            </NavLink>
+                            {locale === '/' ? (
+                            <Text onClick={scrollToAbout}>About Us</Text>):null}
+                        </div>
                     </TextGroupInner>):
                         (<TextGroupInner>
                             <NavLink  to="/product">
@@ -102,14 +97,14 @@ function Nav({totalItems}) {
                 <Group>
                     <Input placeholder="Search Here" search={search}/>
                     <Button >
-                        <SearchIcon onClick={()=> setSearch(!search)} />
+                        <Search onClick={()=> setSearch(!search)} />
                     </Button>
                    
                     {location.pathname !== '/cart' && (
                         <NavLink to="/cart">
                             <Button>
                                 <Badge badgeContent={totalItems} color="secondary">
-                                    <ShoppingCartIcon onClick={handleClick}/>
+                                    <ShoppingCart onClick={handleClick}/>
                                 </Badge>
                             </Button>
                         </NavLink>
@@ -118,7 +113,7 @@ function Nav({totalItems}) {
                 </Group>
             </Wrapper>
                  <ButtonToggle>  
-                    {active? <ClearIcon onClick={() => setActive(active => !active)}/>:<MenuIcon onClick={() => setActive(active => !active)}/>}
+                    {active? <Clear onClick={() => setActive(active => !active)}/>:<Menu onClick={() => setActive(active => !active)}/>}
                 </ButtonToggle> 
         </Container>
     )
